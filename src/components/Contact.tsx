@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const Contact = () => {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hola! Me gustaría hacer una consulta sobre La Mansa Paraguay.");
-    window.open(`https://wa.me/59521123456?text=${message}`, '_blank');
+    window.open(`https://wa.link/qgguzn`, '_blank');
   };
 
   const handleMapClick = () => {
@@ -19,7 +19,7 @@ const Contact = () => {
       window.open(`maps:${lat},${lng}`);
     } else {
       // Abre en Google Maps web
-      window.open(`https://www.google.com/maps?q=${lat},${lng}`);
+      window.open(`https://maps.app.goo.gl/Y7JYvUj1t9NFm6Hp8`);
     }
   };
 
@@ -72,9 +72,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-inter font-semibold text-foreground">Horarios</h4>
                     <div className="font-inter text-muted-foreground space-y-1">
-                      <p>Lunes - Viernes: 7:00 - 23:00</p>
-                      <p>Sábados: 8:00 - 24:00</p>
-                      <p>Domingos: 8:00 - 22:00</p>
+                      <p>Lunes - Jueves: 8:00 - 17:00</p>
+                      <p>Viernes: 8:00 - 23:00</p>
+                      <p>Sabado: 8:00 - 23:00</p>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-inter font-semibold text-foreground">Teléfono</h4>
-                    <p className="font-inter text-muted-foreground">+595 21 123 456</p>
+                    <p className="font-inter text-muted-foreground">+595 993366000</p>
                   </div>
                 </div>
 
@@ -91,7 +91,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-inter font-semibold text-foreground">Email</h4>
-                    <p className="font-inter text-muted-foreground">hola@lamansa.com.py</p>
+                    <p className="font-inter text-muted-foreground">lamansapy@gamil.com</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                   variant="outline" 
                   size="icon" 
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.open('https://instagram.com/lamansaparaguay', '_blank')}
+                  onClick={() => window.open('https://www.instagram.com/lamansapy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')}
                 >
                   <Instagram className="h-5 w-5" />
                 </Button>
@@ -169,8 +169,8 @@ const Contact = () => {
                     Nuestra Ubicación
                   </h4>
                   <p className="font-inter text-muted-foreground mb-4">
-                    Av. España 1234, Asunción<br />
-                    Distrito Central, Paraguay
+                    Aka Caraya, Cd. del Este 100151<br />
+                    Ciudad del Este, Paraguay
                   </p>
                   <Button 
                     variant="outline" 
