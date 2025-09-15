@@ -6,13 +6,13 @@ import roastingImage from "@/assets/gallery-roasting.jpg";
 const SobreNosotros = () => {
   const hitos = [
     {
-      año: "2018",
+      año: "2020",
       titulo: "Los inicios",
       descripcion: "Nace La Mansa con la visión de crear un espacio único donde confluyan la tradición paraguaya y la pasión italiana."
     },
     {
-      año: "2019", 
-      titulo: "Primera cosecha",
+      año: "2021", 
+      titulo: "",
       descripcion: "Lanzamos nuestros primeros granos de café de especialidad cultivados en Cordillera con técnicas sustentables."
     },
     {
@@ -34,39 +34,57 @@ const SobreNosotros = () => {
 
   const equipo = [
     {
-      nombre: "María González",
+      nombre: "María Diaz",
       rol: "Chef Ejecutiva",
-      bio: "Formada en Le Cordon Bleu París, especialista en fusión italiana-paraguaya",
-      imagen: "/api/placeholder/300/300"
+      bio: "Con más de 15 años de experiencia en cocina internacional, lidera nuestro equipo culinario con creatividad y pasión.",
+      imagen: ""
     },
     {
-      nombre: "Giuseppe Rossi", 
-      rol: "Maestro Tostador",
-      bio: "20 años de experiencia en Italia, experto en perfiles de tueste para café de especialidad",
-      imagen: "/api/placeholder/300/300"
+      nombre: "Antonella Garrell", 
+      rol: "Pasteleria & Panadería",
+      bio: "Pasionada por la repostería artesanal, crea dulces y panes que son verdaderas obras de arte.",
+      imagen: ""
     },
     {
-      nombre: "Carlos Benítez",
+      nombre: "David Farinha",
+      rol: "Sous Chef",
+      bio: "Experto en cocina italiana, aporta autenticidad y técnica a nuestros platos principales.",
+      imagen: ""
+    },
+    {
+      nombre: "Paola Franco",
       rol: "Sommelier & Enólogo",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: "/api/placeholder/300/300"
+      imagen: ""
+    },
+     {
+      nombre: "Megi Dennis",
+      rol: "Administrativa Contable",
+      bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
+      imagen: ""
+    },
+      {
+      nombre: "Juan Gavilan",
+      rol: "Mozo Jefe",
+      bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
+      imagen: ""
     }
   ];
 
   const testimonios = [
     {
-      nombre: "Ana Villalba",
-      cita: "La Mansa no es solo un café, es una experiencia que despierta todos los sentidos. El ambiente, la calidad de los productos y la atención hacen que cada visita sea especial.",
+      nombre: "Luca Cernuzzi",
+      cita: "El ambiente es agradable y tiene una amplia selección de vinos de bodegas poco conocidas. También una buena variedad de quesos. El menú es bastante reducido a platos clásico de nuestra cocina pero la relación calidad-precio es muy buena",
       foto: "/api/placeholder/150/150"
     },
     {
-      nombre: "Roberto Silva",
-      cita: "Como amante del buen café, puedo decir que aquí encontré mi lugar favorito en Asunción. La calidad de sus granos y el conocimiento del equipo es excepcional.",
+      nombre: "Nacho Caramuti",
+      cita: "Excelente lugar para pasar un buen rato mientras se come algo delicioso. Especialmente recomendados para los argentinos, amantes del buen vino, los fiambres y los quesos.",
       foto: "/api/placeholder/150/150"
     },
     {
-      nombre: "Lucía Martínez", 
-      cita: "Cada plato es una obra de arte. La fusión de sabores paraguayos e italianos es extraordinaria. Definitivamente mi restaurante favorito.",
+      nombre: "Hudson adriano", 
+      cita: "DELICIOSO Lindo Lugar para disfrutar un poco de la gastronomia Paraguaya. El Combo con las comidas del Paraguay salió muy bién , una perfecta recepción, los tragos Fortin muy sabrosos! recomiendo Todo",
       foto: "/api/placeholder/150/150"
     }
   ];
@@ -112,9 +130,9 @@ const SobreNosotros = () => {
               </h1>
               
               <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                En La Mansa creemos que cada taza de café y cada plato cuentan una historia. 
-                Somos más que un café; somos un puente entre culturas, tradiciones y sabores 
-                que se encuentran para crear experiencias únicas e inolvidables.
+                En La Mansa creemos que cada plato servido y cada copa compartida cuentan una historia. 
+                Somos más que un restaurante; somos un puente entre la calidez paraguaya y la pasión italiana, 
+                donde tradiciones y sabores se encuentran para crear experiencias gastronómicas únicas e inolvidables.
               </p>
             </motion.div>
 
@@ -351,26 +369,26 @@ const SobreNosotros = () => {
               className="space-y-6"
             >
               <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground">
-                Del grano a la taza
+                De la tierra a tu mesa
               </h2>
               
               <div className="space-y-4 font-inter text-muted-foreground leading-relaxed">
                 <p>
-                  Trabajamos directamente con productores locales de Cordillera y Caazapá, 
-                  seleccionando únicamente granos que cumplen con nuestros estándares de 
-                  calidad y sostenibilidad.
+                  Trabajamos directamente con productores locales de Alto Paraná y la región, 
+                 seleccionando únicamente ingredientes frescos que cumplen con nuestros estándares de 
+                 calidad y tradición culinaria.
                 </p>
                 
                 <p>
-                  Nuestro proceso de tostado artesanal respeta los perfiles únicos de cada 
-                  variedad, desarrollando notas y aromas que expresan la personalidad del 
-                  terroir paraguayo con técnicas refinadas.
+                  Nuestro proceso de preparación artesanal respeta las recetas tradicionales paraguayas 
+                  e italianas, desarrollando sabores y aromas que expresan la personalidad de 
+                 ambas culturas con técnicas refinadas.
                 </p>
                 
                 <p>
-                  Cada taza que servimos es el resultado de un cuidadoso proceso que va 
-                  desde la selección de la cereza hasta la extracción perfecta, 
-                  garantizando una experiencia sensorial excepcional.
+                  Cada plato que servimos es el resultado de un cuidadoso proceso que va 
+                 desde la selección de ingredientes hasta la presentación final, 
+                 garantizando una experiencia gastronómica excepcional en Ciudad del Este.
                 </p>
               </div>
             </motion.div>
