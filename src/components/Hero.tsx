@@ -34,15 +34,17 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium"
+                onClick={() => window.location.href = '/menu-semanal'}
               >
-                Reservar Mesa
+                Ver Menú Semanal
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium"
+                onClick={() => window.location.href = '/cafeteria'}
               >
-                Ver Menú
+                Ver Cafetería
               </Button>
             </div>
           </motion.div>
