@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import wineImage from "@/assets/wine-bar-interior.jpg";
+import { useNavigate } from "react-router-dom"; // 👈 importamos el hook
 
 const About = () => {
+  const navigate = useNavigate(); // 👈 inicializamos
+
   return (
     <section id="about" className="py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +18,7 @@ const About = () => {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src={wineImage}
+                src="/DSC03046.jpg"
                 alt="Wine Bar La Mansa"
                 className="w-full h-[500px] object-cover"
               />
@@ -38,28 +40,30 @@ const About = () => {
               
               <div className="space-y-4 font-inter text-muted-foreground leading-relaxed">
                 <p>
-                  En La Mansa fusionamos la calidez de la tradición paraguaya con la 
-                  sofisticación italiana, creando un espacio único donde cada detalle 
-                  está pensado para ofrecer experiencias sensoriales excepcionales.
+                 En La Mansa fusionamos la calidez de la tradición paraguaya con la 
+                 sofisticación italiana, creando un espacio único donde cada detalle 
+                 está pensado para ofrecer experiencias gastronómicas excepcionales.
                 </p>
                 
                 <p>
-                  Nuestros granos son cuidadosamente seleccionados y tostados artesanalmente, 
+                 Nuestros ingredientes son cuidadosamente seleccionados y preparados artesanalmente, 
                   mientras que nuestros vinos propios reflejan el terroir paraguayo con 
                   técnicas europeas, creando maridajes perfectos que despiertan los sentidos.
                 </p>
                 
                 <p>
-                  Cada rincón de nuestro espacio está diseñado para ser un refugio urbano 
-                  donde el tiempo se detiene y cada momento se convierte en una celebración 
-                  de los pequeños placeres de la vida.
+                  Cada rincón de nuestro restaurante está diseñado para ser un refugio gastronómico 
+                  donde el tiempo se detiene y cada comida se convierte en una celebración 
+                  de los sabores auténticos y los momentos compartidos.
                 </p>
               </div>
             </div>
 
+            {/* Botón con navegación */}
             <Button 
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => navigate("/sobre-nosotros")}
             >
               Conocé nuestra historia
             </Button>
