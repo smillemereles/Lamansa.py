@@ -18,158 +18,123 @@ const Cafeteria = () => {
     { id: "salado", name: "Salado", icon: UtensilsCrossed }
   ];
 
-  const productos = {
+  type Producto = {
+    nombre: string;
+    descripcion?: string;
+    precio: string;
+    imagen: string;
+    etiquetas: string[];
+    origen?: string;
+    notas?: string;
+    molienda?: string;
+    maridaje?: string;
+  };
+
+  const productos: Record<string, Producto[]> = {
     autor: [
       {
-        nombre: "Geisha Paraguayo",
-        descripcion: "Variedad exclusiva cultivada en Cordillera, notas florales y cítricas",
-        precio: "18.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Cordillera, Paraguay",
-        notas: "Notas florales, cítricos, chocolate blanco",
-        molienda: "Filtro V60",
-        maridaje: "Croissant de almendras",
-        etiquetas: ["specialty", "origen único"]
+        nombre: "Café de Autor 1",
+        descripcion: "Un café de autor excepcional con notas frutales.",
+        precio: "25.000",
+        imagen: "/images/cafe-autor-1.jpg",
+        etiquetas: ["vegetariano", "specialty"],
+        origen: "Colombia",
+        notas: "Frutas rojas, caramelo",
+        molienda: "Media",
+        maridaje: "Ideal con postres",
       },
       {
-        nombre: "Bourbon Caazapá",
-        descripcion: "Proceso honey, cuerpo medio con acidez brillante",
-        precio: "15.000", 
-        imagen: "/api/placeholder/300/300",
-        origen: "Caazapá, Paraguay",
-        notas: "Caramelo, frutas rojas, nueces",
-        molienda: "Espresso, Filtro",
-        maridaje: "Torta de chocolate",
-        etiquetas: ["honey process"]
-      }
+        nombre: "Café de Autor 2",
+        descripcion: "Café de autor con un perfil de sabor único.",
+        precio: "30.000",
+        imagen: "/images/cafe-autor-2.jpg",
+        etiquetas: ["vegano", "sin gluten"],
+        origen: "Etiopía",
+        notas: "Cítricos, flores",
+        molienda: "Fina",
+        maridaje: "Excelente solo o con chocolate",
+      },
     ],
     clasicos: [
       {
-        nombre: "Espresso Tradicional",
-        descripcion: "Blend de la casa, equilibrado y cremoso",
-        precio: "8.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Blend La Mansa",
-        notas: "Chocolate, caramelo, avellanas",
-        molienda: "Espresso",
-        maridaje: "Medialunas",
-        etiquetas: []
+        nombre: "Espresso Clásico",
+        descripcion: "Un espresso intenso y aromático.",
+        precio: "15.000",
+        imagen: "/images/espresso-clasico.jpg",
+        etiquetas: ["sin lactosa"],
       },
       {
-        nombre: "Americano",
-        descripcion: "Espresso alargado con agua caliente",
-        precio: "9.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Blend La Mansa",
-        notas: "Limpio, balanceado",
-        molienda: "Espresso",
-        maridaje: "Tostadas con mermelada",
-        etiquetas: []
+        nombre: "Cappuccino Clásico",
+        descripcion: "Café expreso con leche vaporizada y espuma de leche.",
+        precio: "18.000",
+        imagen: "/images/cappuccino-clasico.jpg",
+        etiquetas: ["vegetariano"],
       },
-      {
-        nombre: "Cappuccino",
-        descripcion: "Espresso con leche vaporizada y espuma cremosa",
-        precio: "12.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Blend La Mansa",
-        notas: "Cremoso, dulce natural",
-        molienda: "Espresso",
-        maridaje: "Bizcochuelo de vainilla",
-        etiquetas: []
-      }
     ],
     frios: [
       {
-        nombre: "Cold Brew Nitro",
-        descripcion: "Café filtrado en frío con nitrógeno, cremoso y refrescante",
-        precio: "14.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Blend especial cold brew",
-        notas: "Suave, chocolatoso, cremoso",
-        molienda: "Gruesa",
-        maridaje: "Alfajores",
-        etiquetas: ["sin lactosa"]
+        nombre: "Café Helado",
+        descripcion: "Café frío con hielo, perfecto para refrescarse.",
+        precio: "20.000",
+        imagen: "/images/cafe-helado.jpg",
+        etiquetas: ["sin lactosa", "vegano"],
       },
       {
-        nombre: "Frappé de Vainilla",
-        descripcion: "Café helado con helado de vainilla artesanal",
-        precio: "16.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Espresso blend",
-        notas: "Dulce, cremoso, refrescante",
-        molienda: "Espresso",
-        maridaje: "Cookies de chocolate",
-        etiquetas: []
-      }
+        nombre: "Té Frío de Frutas",
+        descripcion: "Té frío infusionado con frutas frescas.",
+        precio: "22.000",
+        imagen: "/images/te-frio-frutas.jpg",
+        etiquetas: ["vegetariano", "sin gluten"],
+      },
     ],
     te: [
       {
-        nombre: "Earl Grey Premium",
-        descripcion: "Té negro con bergamota y pétalos de aciano",
+        nombre: "Té Verde",
+        descripcion: "Té verde japonés de alta calidad.",
         precio: "10.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Sri Lanka",
-        notas: "Cítrico, floral, elegante",
-        maridaje: "Scones con crema",
-        etiquetas: ["sin cafeína opcional"]
+        imagen: "/images/te-verde.jpg",
+        etiquetas: ["vegano", "sin gluten"],
       },
       {
-        nombre: "Manzanilla con Miel",
-        descripcion: "Infusión relajante con miel de abeja local",
-        precio: "8.000",
-        imagen: "/api/placeholder/300/300",
-        origen: "Hierbas naturales",
-        notas: "Suave, floral, calmante",
-        maridaje: "Galletitas de avena",
-        etiquetas: ["sin cafeína", "natural"]
-      }
+        nombre: "Té Negro",
+        descripcion: "Té negro de Assam, India.",
+        precio: "12.000",
+        imagen: "/images/te-negro.jpg",
+        etiquetas: ["vegetariano"],
+      },
     ],
     pasteleria: [
       {
-        nombre: "Croissant de Almendras",
-        descripcion: "Masa hojaldrada con crema de almendras y láminas tostadas",
-        precio: "12.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: ["recién horneado"]
+        nombre: "Tarta de Queso",
+        descripcion: "Deliciosa tarta de queso con base de galleta.",
+        precio: "35.000",
+        imagen: "/images/tarta-queso.jpg",
+        etiquetas: ["vegetariano"],
       },
       {
-        nombre: "Cheesecake de Maracuyá",
-        descripcion: "Base de galletas, queso crema y coulis de fruta de la pasión",
-        precio: "15.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: ["sin gluten", "vegetariano"]
+        nombre: "Brownie de Chocolate",
+        descripcion: "Brownie denso y fudgy con nueces.",
+        precio: "30.000",
+        imagen: "/images/brownie-chocolate.jpg",
+        etiquetas: ["sin gluten"],
       },
-      {
-        nombre: "Tiramisú Tradicional",
-        descripcion: "Mascarpone, café, cacao y un toque de amaretto",
-        precio: "14.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: ["vegetariano"]
-      }
     ],
     salado: [
       {
-        nombre: "Tostada Palta & Huevo",
-        descripcion: "Pan integral, palta, huevo poché, microgreens y aceite de oliva",
-        precio: "18.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: ["vegetariano", "saludable"]
-      },
-      {
-        nombre: "Sándwich Jamón Serrano",
-        descripcion: "Ciabatta, jamón serrano, rúcula, tomate seco y queso manchego",
-        precio: "22.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: []
-      },
-      {
         nombre: "Quiche de Espinaca",
-        descripción: "Masa quebrada, espinaca, queso de cabra y nueces",
-        precio: "16.000",
-        imagen: "/api/placeholder/300/300",
-        etiquetas: ["vegetariano"]
-      }
-    ]
+        descripcion: "Quiche cremosa de espinaca y queso.",
+        precio: "28.000",
+        imagen: "/images/quiche-espinaca.jpg",
+        etiquetas: ["vegetariano"],
+      },
+      {
+        nombre: "Empanada de Carne",
+        descripcion: "Empanada rellena de carne vacuna y especias.",
+        precio: "25.000",
+        imagen: "/images/empanada-carne.jpg",
+        etiquetas: ["sin lactosa"],
+      },
+    ],
   };
 
   const getEtiquetaColor = (etiqueta: string) => {
@@ -293,7 +258,7 @@ const Cafeteria = () => {
                       )}
 
                       <div className="flex gap-2">
-                        {(producto as any).origen && (
+                        {producto.origen && (
                           <Dialog>
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" className="flex-1 text-xs">
@@ -310,28 +275,26 @@ const Cafeteria = () => {
                                 <p className="font-inter text-muted-foreground">
                                   {producto.descripcion}
                                 </p>
-                                
                                 <div className="grid grid-cols-2 gap-4 text-sm">
                                   <div>
                                     <h4 className="font-semibold text-foreground">Origen:</h4>
-                                    <p className="text-muted-foreground">{(producto as any).origen}</p>
+                                    <p className="text-muted-foreground">{producto.origen}</p>
                                   </div>
                                   <div>
                                     <h4 className="font-semibold text-foreground">Notas:</h4>
-                                    <p className="text-muted-foreground">{(producto as any).notas}</p>
+                                    <p className="text-muted-foreground">{producto.notas}</p>
                                   </div>
-                                  {(producto as any).molienda && (
+                                  {producto.molienda && (
                                     <div>
                                       <h4 className="font-semibold text-foreground">Molienda:</h4>
-                                      <p className="text-muted-foreground">{(producto as any).molienda}</p>
+                                      <p className="text-muted-foreground">{producto.molienda}</p>
                                     </div>
                                   )}
                                   <div>
                                     <h4 className="font-semibold text-foreground">Maridaje:</h4>
-                                    <p className="text-muted-foreground">{(producto as any).maridaje}</p>
+                                    <p className="text-muted-foreground">{producto.maridaje}</p>
                                   </div>
                                 </div>
-                                
                                 <div className="pt-4 border-t">
                                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
                                     <MessageCircle className="h-4 w-4 mr-2" />
