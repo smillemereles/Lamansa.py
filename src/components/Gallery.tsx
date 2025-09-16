@@ -12,24 +12,24 @@ const Gallery = () => {
 
   const images = [
     {
-      src: heroImage,
+      src: "/areadevinos.jpg",
       alt: "Interior principal de La Mansa",
       title: "Ambiente Principal"
     },
     {
-      src: wineImage,
+      src: "areadevinos2.jpg",
       alt: "Área de vinos de La Mansa",
       title: "Wine Bar"
     },
     {
-      src: seatingImage,
+      src: "areadevinos3.jpg",
       alt: "Área de asientos cómodos",
       title: "Zona de Relax"
     },
     {
-      src: roastingImage,
-      alt: "Área de tostado de café",
-      title: "Tostadero"
+      src: "areadevitrina.jpg",
+      alt: "Área de vitrina y pastelería",
+      title: "Vitrina y Pastelería"
     }
   ];
 
