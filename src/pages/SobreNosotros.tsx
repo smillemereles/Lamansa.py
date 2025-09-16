@@ -37,37 +37,37 @@ const SobreNosotros = () => {
       nombre: "María Diaz",
       rol: "Chef Ejecutiva",
       bio: "Con más de 15 años de experiencia en cocina internacional, lidera nuestro equipo culinario con creatividad y pasión.",
-      imagen: ""
+      imagen: "/maria.jpg"
     },
     {
       nombre: "Antonella Garrell", 
       rol: "Pasteleria & Panadería",
       bio: "Pasionada por la repostería artesanal, crea dulces y panes que son verdaderas obras de arte.",
-      imagen: ""
+      imagen: "/anto.jpg"
     },
     {
       nombre: "David Farinha",
       rol: "Sous Chef",
       bio: "Experto en cocina italiana, aporta autenticidad y técnica a nuestros platos principales.",
-      imagen: ""
+      imagen: "/david.jpg"
     },
     {
-      nombre: "Paola Franco",
-      rol: "Sommelier & Enólogo",
+      nombre: "Gladys",
+      rol: "Ayudante de Cocina",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: ""
+      imagen: "/gladis.jpg"
     },
      {
       nombre: "Megi Dennis",
       rol: "Administrativa Contable",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: ""
+      imagen: "/megi.jpg"
     },
       {
       nombre: "Juan Gavilan",
       rol: "Mozo Jefe",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: ""
+      imagen: "/juan.jpg"
     }
   ];
 
@@ -144,7 +144,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src={wineImage}
+                  src="/DSC03046.jpg"
                   alt="Interior La Mansa"
                   className="w-full h-[500px] object-cover"
                 />
@@ -276,10 +276,13 @@ const SobreNosotros = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-card rounded-2xl shadow-lg border border-border overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="aspect-square overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center">
-                    <Users className="h-20 w-20 text-primary/30" />
-                  </div>
+                {/* Imagen rectangular ocupando todo el ancho superior */}
+                <div className="w-full h-[200px] overflow-hidden">
+                  <img
+                    src={miembro.imagen}
+                    alt={miembro.nombre}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="font-playfair text-xl font-bold text-foreground mb-1">
@@ -354,7 +357,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src={roastingImage}
+                  src="/DSC01990.jpg"
                   alt="Proceso de tostado"
                   className="w-full h-[400px] object-cover"
                 />
