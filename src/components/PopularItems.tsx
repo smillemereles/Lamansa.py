@@ -3,40 +3,43 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import coffeeImage from "@/assets/coffee-specialty.jpg";
 import pastriesImage from "@/assets/pastries-coffee.jpg";
+import { useNavigate } from "react-router-dom";
 
 const PopularItems = () => {
+  const navigate = useNavigate();
+
   const items = [
     {
       id: 1,
-      name: "Cortado Mansa",
-      price: "₲ 25.000",
-      image: coffeeImage,
-      description: "Nuestro cortado signature con leche de almendras",
-      badges: ["Specialty", "Vegano"]
+      name: "Tabla de fríos y quesos",
+      price: "₲ 150.000",
+      image: "/tabladefrios.jpg",
+      description: "Selección de embutidos y quesos artesanales",
+      badges: ["Specialty", "Fresh"]
     },
     {
       id: 2,
-      name: "Croissant de Almendras",
-      price: "₲ 18.000", 
-      image: pastriesImage,
-      description: "Horneado diariamente con almendras locales",
-      badges: ["Artesanal", "Fresh"]
+      name: "Noquis salsa blanca",
+      price: "₲ 40.000", 
+      image: "/nhoquissalsablanca.jpg",
+      description: "Nhoquis caseros con salsa de crema y parmesano",
+      badges: ["Artesanal", "Con Gluten"]
     },
     {
       id: 3,
-      name: "Espresso Doble",
-      price: "₲ 22.000",
-      image: coffeeImage,
-      description: "Blend único de granos paraguayos e italianos",
-      badges: ["Doble", "Intenso"]
+      name: "Ravioles salsa bolonesa",
+      price: "₲ 40.000",
+      image: "/ravioleslabolonhesa.jpg",
+      description: "Ravioles rellenos de carne con salsa de tomate casera",
+      badges: ["Sabroso", "Con Gluten"]
     },
     {
       id: 4,
-      name: "Tarta de Chocolate",
-      price: "₲ 32.000",
-      image: pastriesImage,
-      description: "Chocolate 70% con infusión de yerba mate",
-      badges: ["Signature", "Sin Gluten"]
+      name: "Fideos al pesto",
+      price: "₲ 40.000",
+      image: "/fideo al pesto .jpg",
+      description: "Pasta fresca con salsa de albahaca, ajo y piñones",
+      badges: ["Signature", "Con Gluten"]
     }
   ];
 
@@ -123,6 +126,7 @@ const PopularItems = () => {
             variant="outline" 
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => navigate("/menu-general")}
           >
             Descubrir menú completo
           </Button>
