@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Clock, Download, Leaf, Wheat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import bgMenuSemanal from "/bg-menu-semanal.png"; // Coloca la imagen en /public
 
 const MenuSemanal = () => {
   const menuSemanal = [
@@ -112,24 +113,6 @@ const MenuSemanal = () => {
           etiquetas: ["vegano"]
         }
       ]
-    },
-    {
-      dia: "Domingo",
-      fecha: "Enero 21",
-      comidas: [
-        {
-          nombre: "Asado tradicional paraguayo",
-          descripcion: "Con mandioca, sopa paraguaya y ensalada",
-          precio: "65.000",
-          etiquetas: []
-        },
-        {
-          nombre: "Tortilla de verduras",
-          descripcion: "Con queso de cabra y salsa verde",
-          precio: "39.000",
-          etiquetas: ["vegetariano", "sin gluten"]
-        }
-      ]
     }
   ];
 
@@ -159,8 +142,20 @@ const MenuSemanal = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: `url(${bgMenuSemanal})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        position: "relative",
+      }}
+    >
+      {/* Overlay claro para mejorar contraste */}
+      <div className="absolute inset-0 bg-white/60 pointer-events-none z-0" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -180,10 +175,12 @@ const MenuSemanal = () => {
               <Clock className="h-4 w-4" />
               <span>Vigencia: 15 - 21 Enero 2024</span>
             </div>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <Download className="h-4 w-4 mr-2" />
-              Descargar PDF
-            </Button>
+            <a href="/menu-semanal.pdf" download>
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Download className="h-4 w-4 mr-2" />
+                Descargar PDF
+              </Button>
+            </a>
           </div>
         </motion.div>
 
