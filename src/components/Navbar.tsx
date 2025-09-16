@@ -6,6 +6,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Inicio", href: "/" },
+    { name: "Menú General", href: "/menu-general" },
     { name: "Menú semanal", href: "/menu-semanal" },
     { name: "Cafetería", href: "/cafeteria" },
     { name: "Sobre nosotros", href: "/sobre-nosotros" },

@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Index from "./pages/Index";
+import MenuGeneral from "./pages/MenuGeneral";
 import MenuSemanal from "./pages/MenuSemanal";
 import Cafeteria from "./pages/Cafeteria";
 import SobreNosotros from "./pages/SobreNosotros";
@@ -23,6 +24,7 @@ const App = () => (
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/menu-general" element={<MenuGeneral />} />
             <Route path="/menu-semanal" element={<MenuSemanal />} />
             <Route path="/cafeteria" element={<Cafeteria />} />
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
