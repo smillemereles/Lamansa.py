@@ -7,15 +7,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Cafeteria = () => {
-  const [selectedCategory, setSelectedCategory] = useState("autor");
+  const [selectedCategory, setSelectedCategory] = useState("cafe");
 
   const categories = [
-    { id: "autor", name: "Café de autor", icon: Heart },
-    { id: "clasicos", name: "Clásicos", icon: Coffee },
-    { id: "frios", name: "Fríos", icon: Snowflake },
-    { id: "te", name: "Té/Infusiones", icon: Leaf },
-    { id: "pasteleria", name: "Pastelería", icon: UtensilsCrossed },
-    { id: "salado", name: "Salado", icon: UtensilsCrossed }
+  { id: "cafe",    name: "Café caliente", icon: Coffee },
+  { id: "frios",   name: "Fríos",          icon: Snowflake },
+  { id: "postres", name: "Postres",        icon: UtensilsCrossed },
+  { id: "salados", name: "Salados",        icon: UtensilsCrossed },
   ];
 
   type Producto = {
@@ -30,112 +28,44 @@ const Cafeteria = () => {
     maridaje?: string;
   };
 
-  const productos: Record<string, Producto[]> = {
-    autor: [
-      {
-        nombre: "Café de Autor 1",
-        descripcion: "Un café de autor excepcional con notas frutales.",
-        precio: "25.000",
-        imagen: "/images/cafe-autor-1.jpg",
-        etiquetas: ["vegetariano", "specialty"],
-        origen: "Colombia",
-        notas: "Frutas rojas, caramelo",
-        molienda: "Media",
-        maridaje: "Ideal con postres",
-      },
-      {
-        nombre: "Café de Autor 2",
-        descripcion: "Café de autor con un perfil de sabor único.",
-        precio: "30.000",
-        imagen: "/images/cafe-autor-2.jpg",
-        etiquetas: ["vegano", "sin gluten"],
-        origen: "Etiopía",
-        notas: "Cítricos, flores",
-        molienda: "Fina",
-        maridaje: "Excelente solo o con chocolate",
-      },
-    ],
-    clasicos: [
-      {
-        nombre: "Espresso Clásico",
-        descripcion: "Un espresso intenso y aromático.",
-        precio: "15.000",
-        imagen: "/images/espresso-clasico.jpg",
-        etiquetas: ["sin lactosa"],
-      },
-      {
-        nombre: "Cappuccino Clásico",
-        descripcion: "Café expreso con leche vaporizada y espuma de leche.",
-        precio: "18.000",
-        imagen: "/images/cappuccino-clasico.jpg",
-        etiquetas: ["vegetariano"],
-      },
-    ],
-    frios: [
-      {
-        nombre: "Café Helado",
-        descripcion: "Café frío con hielo, perfecto para refrescarse.",
-        precio: "20.000",
-        imagen: "/images/cafe-helado.jpg",
-        etiquetas: ["sin lactosa", "vegano"],
-      },
-      {
-        nombre: "Té Frío de Frutas",
-        descripcion: "Té frío infusionado con frutas frescas.",
-        precio: "22.000",
-        imagen: "/images/te-frio-frutas.jpg",
-        etiquetas: ["vegetariano", "sin gluten"],
-      },
-    ],
-    te: [
-      {
-        nombre: "Té Verde",
-        descripcion: "Té verde japonés de alta calidad.",
-        precio: "10.000",
-        imagen: "/images/te-verde.jpg",
-        etiquetas: ["vegano", "sin gluten"],
-      },
-      {
-        nombre: "Té Negro",
-        descripcion: "Té negro de Assam, India.",
-        precio: "12.000",
-        imagen: "/images/te-negro.jpg",
-        etiquetas: ["vegetariano"],
-      },
-    ],
-    pasteleria: [
-      {
-        nombre: "Tarta de Queso",
-        descripcion: "Deliciosa tarta de queso con base de galleta.",
-        precio: "35.000",
-        imagen: "/images/tarta-queso.jpg",
-        etiquetas: ["vegetariano"],
-      },
-      {
-        nombre: "Brownie de Chocolate",
-        descripcion: "Brownie denso y fudgy con nueces.",
-        precio: "30.000",
-        imagen: "/images/brownie-chocolate.jpg",
-        etiquetas: ["sin gluten"],
-      },
-    ],
-    salado: [
-      {
-        nombre: "Quiche de Espinaca",
-        descripcion: "Quiche cremosa de espinaca y queso.",
-        precio: "28.000",
-        imagen: "/images/quiche-espinaca.jpg",
-        etiquetas: ["vegetariano"],
-      },
-      {
-        nombre: "Empanada de Carne",
-        descripcion: "Empanada rellena de carne vacuna y especias.",
-        precio: "25.000",
-        imagen: "/images/empanada-carne.jpg",
-        etiquetas: ["sin lactosa"],
-      },
-    ],
-  };
+ const productos: Record<string, Producto[]> = {
+  cafe: [
+    { nombre: "Americano",       descripcion: "Café filtrado intenso.",                  precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
+    { nombre: "Café corto",      descripcion: "Shot concentrado y aromático.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
+    { nombre: "Espresso longo",  descripcion: "Espresso más largo, sabor balanceado.",   precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
+    { nombre: "Mocaccino",       descripcion: "Espresso, leche y chocolate.",            precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Chocolate",       descripcion: "Bebida caliente de cacao.",               precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+  ],
+
+  frios: [
+    { nombre: "Agua",             descripcion: "Agua mineral fría.",                      precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten", "sin lactosa"] },
+    { nombre: "Refresco",         descripcion: "Bebida gaseosa bien fría.",               precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten"] },
+    { nombre: "Jugos naturales",  descripcion: "Frutas exprimidas al momento.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten"] },
+  ],
+
+  postres: [
+    { nombre: "Alfajor de maicena",   descripcion: "Clásico con dulce de leche y coco.",  precio: "—", imagen: "/alfajordemaicena.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Alfajor chocolate",   descripcion: "Baño de chocolate, relleno cremoso.",  precio: "—", imagen: "/alfajorbanhadoenchocolate.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Tarta toffi",         descripcion: "Caramelo toffee y base crocante.",     precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Pepas",               descripcion: "Galletas con corazón de dulce.",       precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Pasta frola",         descripcion: "Clásica de membrillo.",                precio: "—", imagen: "/pastaplora.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Brownie de chocolate",descripcion: "Bien húmedo, intenso en cacao.",       precio: "—", imagen: "/brownie.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Cookie tradicional",  descripcion: "Galleta grande y mantequillosa.",      precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Cookie red velvet",   descripcion: "Suave, con notas de cacao.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Tarta de coco",       descripcion: "Rellena y aromática.",                 precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Alfajor de coco",     descripcion: "Dulce y suave.",                       precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Torta de naranja",    descripcion: "Esponjosa y cítrica.",                 precio: "—", imagen: "/tortadenaranja.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Torta marmolada",     descripcion: "Vainilla y chocolate en espiral.",     precio: "—", imagen: "/tortamarmolada.jpg", etiquetas: ["vegetariano"] },
+  ],
+
+  salados: [
+    { nombre: "Empanadas (carne, pollo, choclo, jamón y queso)", descripcion: "Fritas o al horno.", precio: "—", imagen: "/empanadas", etiquetas: [] },
+    { nombre: "Mbejú",             descripcion: "Clásico paraguayo de almidón y queso.",  precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["sin gluten"] },
+    { nombre: "Chipitas",          descripcion: "Bocaditos de queso para picar.",         precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["sin gluten"] },
+    { nombre: "Sopa paraguaya",    descripcion: "Torta salada de maíz y queso.",          precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Pajagua Mascada",   descripcion: "Tradición paraguaya a base de carne.",   precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
+  ],
+};
 
   const getEtiquetaColor = (etiqueta: string) => {
     switch (etiqueta) {
@@ -225,7 +155,6 @@ const Cafeteria = () => {
                         <Coffee className="h-16 w-16 text-primary/30" />
                       </div>
                     </div>
-                    
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="font-inter font-bold text-foreground text-lg">
@@ -235,11 +164,9 @@ const Cafeteria = () => {
                           ₲ {producto.precio}
                         </span>
                       </div>
-                      
                       <p className="font-inter text-muted-foreground text-sm mb-4 leading-relaxed">
                         {producto.descripcion}
                       </p>
-                      
                       {producto.etiquetas && producto.etiquetas.length > 0 && (
                         <div className="flex flex-wrap gap-1 mb-4">
                           {producto.etiquetas.map((etiqueta) => (
@@ -256,64 +183,6 @@ const Cafeteria = () => {
                           ))}
                         </div>
                       )}
-
-                      <div className="flex gap-2">
-                        {producto.origen && (
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button variant="outline" size="sm" className="flex-1 text-xs">
-                                Ver detalles
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-md">
-                              <DialogHeader>
-                                <DialogTitle className="font-playfair text-xl">
-                                  {producto.nombre}
-                                </DialogTitle>
-                              </DialogHeader>
-                              <div className="space-y-4">
-                                <p className="font-inter text-muted-foreground">
-                                  {producto.descripcion}
-                                </p>
-                                <div className="grid grid-cols-2 gap-4 text-sm">
-                                  <div>
-                                    <h4 className="font-semibold text-foreground">Origen:</h4>
-                                    <p className="text-muted-foreground">{producto.origen}</p>
-                                  </div>
-                                  <div>
-                                    <h4 className="font-semibold text-foreground">Notas:</h4>
-                                    <p className="text-muted-foreground">{producto.notas}</p>
-                                  </div>
-                                  {producto.molienda && (
-                                    <div>
-                                      <h4 className="font-semibold text-foreground">Molienda:</h4>
-                                      <p className="text-muted-foreground">{producto.molienda}</p>
-                                    </div>
-                                  )}
-                                  <div>
-                                    <h4 className="font-semibold text-foreground">Maridaje:</h4>
-                                    <p className="text-muted-foreground">{producto.maridaje}</p>
-                                  </div>
-                                </div>
-                                <div className="pt-4 border-t">
-                                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                                    <MessageCircle className="h-4 w-4 mr-2" />
-                                    Pedir por WhatsApp
-                                  </Button>
-                                </div>
-                              </div>
-                            </DialogContent>
-                          </Dialog>
-                        )}
-                        
-                        <Button 
-                          size="sm" 
-                          className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground text-xs"
-                        >
-                          <MessageCircle className="h-3 w-3 mr-1" />
-                          Pedir
-                        </Button>
-                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -335,13 +204,20 @@ const Cafeteria = () => {
             <p className="font-inter text-muted-foreground mb-6">
               Nuestro equipo está listo para asesorarte y preparar tu pedido perfecto
             </p>
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium"
+            <a
+              href="https://wa.link/qgguzn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full"
             >
-              <MessageCircle className="h-5 w-5 mr-2" />
-              Contactar por WhatsApp
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium w-full"
+              >
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Contactar por WhatsApp
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>
