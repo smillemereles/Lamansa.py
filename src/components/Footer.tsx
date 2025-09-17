@@ -20,13 +20,13 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/lamansapy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                 className="text-background/60 hover:text-primary transition-colors duration-200"
               >
                 <Instagram className="h-6 w-6" />
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/lamansapy/?locale=es_LA" 
                 className="text-background/60 hover:text-primary transition-colors duration-200"
               >
                 <Facebook className="h-6 w-6" />
@@ -91,12 +91,12 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-background/80 text-sm">+595 21 123 456</span>
+                <span className="text-background/80 text-sm">+595 933 366000</span>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-background/80 text-sm">hola@lamansa.com.py</span>
+                <span className="text-background/80 text-sm">lamansapy@gamil.com</span>
               </div>
               
               <div className="flex items-start space-x-3">
