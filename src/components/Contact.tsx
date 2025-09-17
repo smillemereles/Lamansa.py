@@ -61,8 +61,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-inter font-semibold text-foreground">Dirección</h4>
                     <p className="font-inter text-muted-foreground">
-                      Av. España 1234, Asunción<br />
-                      Distrito Central, Paraguay
+                      Aka Caraya<br />
+                      ciudad del este , Paraguay
                     </p>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                   variant="outline" 
                   size="icon" 
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.open('https://facebook.com/lamansaparaguay', '_blank')}
+                  onClick={() => window.open('https://www.facebook.com/lamansapy/?locale=es_LA', '_blank')}
                 >
                   <Facebook className="h-5 w-5" />
                 </Button>
@@ -212,7 +212,7 @@ const Contact = () => {
                 variant="outline" 
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium"
-                onClick={() => window.location.href = 'mailto:hola@lamansa.com.py'}
+                onClick={() => window.location.href = 'mailto:lamansapy@gamil.com'}
               >
                 Enviar Email
               </Button>
