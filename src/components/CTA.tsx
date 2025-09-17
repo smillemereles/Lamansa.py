@@ -22,19 +22,33 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium px-8"
+            <a
+              href="https://wa.link/qgguzn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              Reservar Mesa
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium px-8"
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium px-8 w-full"
+              >
+                Reservar Mesa
+              </Button>
+            </a>
+            <a
+              href="https://maps.app.goo.gl/i7fQnhJq5zHwAu9i9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              Ver Ubicación
-            </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium px-8 w-full"
+              >
+                Ver Ubicación
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>
