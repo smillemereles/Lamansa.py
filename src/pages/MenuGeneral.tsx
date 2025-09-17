@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import bgHeroMenu from "/bg-hero-menu.jpg"; // Asegúrate de tener esta imagen en /public
-
+import { useNavigate } from "react-router-dom";
 const MenuGeneral = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -239,15 +239,28 @@ const MenuGeneral = () => {
     }
   };
 
-  const filteredItems = (items: any[]) => {
+  type MenuItem = {
+    nombre: string;
+    descripcion: string;
+    precio: string;
+    etiquetas: string[];
+    guarniciones?: string[];
+    salsas?: string[];
+  };
+
+  const filteredItems = (items: MenuItem[]) => {
     if (!searchTerm) return items;
-    return items.filter(item => 
+    return items.filter(item =>
       item.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
     );
   };
 
-  const renderMenuCard = (item: any, showGuarniciones = false, showSalsas = false) => (
+  const renderMenuCard = (
+    item: MenuItem,
+    showGuarniciones = false,
+    showSalsas = false
+  ) => (
     <Card key={item.nombre} className="hover:shadow-lg transition-shadow duration-300 border-border">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
@@ -459,12 +472,19 @@ const MenuGeneral = () => {
               <p className="font-inter text-muted-foreground mb-6">
                 Hacé tu pedido por WhatsApp y te lo preparamos para llevar o delivery
               </p>
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium"
+              <a
+                href="https://wa.link/qgguzn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full"
               >
-                Pedir por WhatsApp
-              </Button>
+                <Button 
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium w-full"
+                >
+                  Pedir por WhatsApp
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </motion.div>
