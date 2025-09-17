@@ -254,12 +254,19 @@ const MenuSemanal = () => {
             <p className="font-inter text-muted-foreground mb-6">
               Hacé tu pedido por WhatsApp y te lo preparamos para llevar o delivery
             </p>
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium"
+            <a
+              href="https://wa.link/qgguzn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full"
             >
-              Pedir por WhatsApp
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium w-full"
+              >
+                Pedir por WhatsApp
+              </Button>
+            </a>
           </div>
         </motion.div>
 
