@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -43,8 +43,8 @@ const Navbar = () => {
     >
       <nav className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex-shrink-0 flex items-center"
           tabIndex={0}
           style={{ minWidth: 48 }}
@@ -57,7 +57,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             style={{ verticalAlign: "middle" }}
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-4 lg:gap-8 ml-6">
@@ -66,21 +66,24 @@ const Navbar = () => {
             const active = isActive(item.href);
             return (
               <li key={item.name} className="relative inline-flex items-center">
-                <motion.a
-                  href={item.href}
-                  className={`inline-flex items-center gap-2 font-inter text-base font-medium px-3 py-1 rounded-full transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c0165a]
-                    ${active
-                      ? "bg-[#c0165a] text-white"
-                      : "text-[#222] hover:text-[#c0165a] hover:bg-[#c0165a]/10"
-                    }
-                  `}
+                <motion.div
                   whileHover={{ scale: 1.04 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
-                  aria-current={active ? "page" : undefined}
                 >
-                  <Icon className="h-5 w-5" />
-                  <span>{item.name}</span>
-                </motion.a>
+                  <Link
+                    to={item.href}
+                    className={`inline-flex items-center gap-2 font-inter text-base font-medium px-3 py-1 rounded-full transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c0165a]
+                      ${active
+                        ? "bg-[#c0165a] text-white"
+                        : "text-[#222] hover:text-[#c0165a] hover:bg-[#c0165a]/10"
+                      }
+                    `}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    <Icon className="h-5 w-5" />
+                    <span>{item.name}</span>
+                  </Link>
+                </motion.div>
                 {/* Hover underline */}
                 <motion.div
                   layout
@@ -120,21 +123,24 @@ const Navbar = () => {
                   const Icon = item.icon;
                   const active = isActive(item.href);
                   return (
-                    <motion.a
+                    <motion.div
                       key={item.name}
-                      href={item.href}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-full font-inter text-lg font-medium transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c0165a]
-                        ${active
-                          ? "bg-[#c0165a] text-white"
-                          : "text-[#222] hover:text-[#c0165a] hover:bg-[#c0165a]/10"
-                        }
-                      `}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2, ease: "easeInOut" }}
                     >
-                      <Icon className="h-6 w-6" />
-                      {item.name}
-                    </motion.a>
+                      <Link
+                        to={item.href}
+                        className={`flex items-center gap-3 px-4 py-3 rounded-full font-inter text-lg font-medium transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c0165a]
+                          ${active
+                            ? "bg-[#c0165a] text-white"
+                            : "text-[#222] hover:text-[#c0165a] hover:bg-[#c0165a]/10"
+                          }
+                        `}
+                      >
+                        <Icon className="h-6 w-6" />
+                        {item.name}
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </nav>
