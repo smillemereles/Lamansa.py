@@ -1,5 +1,4 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,7 +8,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <img 
-              src={logo} 
+              src="/logo la mansa.jpg" 
               alt="La Mansa Paraguay" 
               className="h-12 w-auto mb-6 filter brightness-0 invert"
             />
@@ -114,7 +113,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="font-inter text-background/60 text-sm">
-              © 2024 La Mansa Paraguay. Todos los derechos reservados.
+              © 2025 La Mansa Paraguay. Todos los derechos reservados.
             </p>
             
             <div className="flex space-x-6 mt-4 md:mt-0 font-inter text-sm">
