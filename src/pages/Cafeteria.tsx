@@ -22,48 +22,44 @@ const Cafeteria = () => {
     precio: string;
     imagen: string;
     etiquetas: string[];
-    origen?: string;
-    notas?: string;
-    molienda?: string;
-    maridaje?: string;
   };
 
  const productos: Record<string, Producto[]> = {
   cafe: [
-    { nombre: "Americano",       descripcion: "Café filtrado intenso.",                  precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
-    { nombre: "Café corto",      descripcion: "Shot concentrado y aromático.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
-    { nombre: "Espresso longo",  descripcion: "Espresso más largo, sabor balanceado.",   precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
-    { nombre: "Mocaccino",       descripcion: "Espresso, leche y chocolate.",            precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Chocolate",       descripcion: "Bebida caliente de cacao.",               precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Americano",       descripcion: "Café filtrado intenso.",                  precio: "—", imagen: "/tazadecafé.png", etiquetas: [] },
+    { nombre: "Café corto",      descripcion: "Shot concentrado y aromático.",           precio: "—", imagen: "/cafécorto.png", etiquetas: [] },
+    { nombre: "Espresso longo",  descripcion: "Espresso más largo, sabor balanceado.",   precio: "—", imagen: "/espresso.png", etiquetas: [] },
+    { nombre: "Mocaccino",       descripcion: "Espresso, leche y chocolate.",            precio: "—", imagen: "/moccaccino.png", etiquetas: ["vegetariano"] },
+    { nombre: "Chocolate",       descripcion: "Bebida caliente de cacao.",               precio: "—", imagen: "/chocolate.png", etiquetas: ["vegetariano"] },
   ],
 
   frios: [
-    { nombre: "Agua",             descripcion: "Agua mineral fría.",                      precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten", "sin lactosa"] },
-    { nombre: "Refresco",         descripcion: "Bebida gaseosa bien fría.",               precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten"] },
-    { nombre: "Jugos naturales",  descripcion: "Frutas exprimidas al momento.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegano", "sin gluten"] },
+    { nombre: "Agua",             descripcion: "Agua mineral fría.",                      precio: "—", imagen: "/", etiquetas: ["vegano", "sin gluten", "sin lactosa"] },
+    { nombre: "Refresco",         descripcion: "Bebida gaseosa bien fría.",               precio: "—", imagen: "/", etiquetas: ["vegano", "sin gluten"] },
+    { nombre: "Jugos naturales",  descripcion: "Frutas exprimidas al momento.",           precio: "—", imagen: "/jugos.jpg", etiquetas: ["vegano", "sin gluten"] },
   ],
 
   postres: [
     { nombre: "Alfajor de maicena",   descripcion: "Clásico con dulce de leche y coco.",  precio: "—", imagen: "/alfajordemaicena.jpg", etiquetas: ["vegetariano"] },
     { nombre: "Alfajor chocolate",   descripcion: "Baño de chocolate, relleno cremoso.",  precio: "—", imagen: "/alfajorbanhadoenchocolate.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Tarta toffi",         descripcion: "Caramelo toffee y base crocante.",     precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Pepas",               descripcion: "Galletas con corazón de dulce.",       precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Tarta toffi",         descripcion: "Caramelo toffee y base crocante.",     precio: "—", imagen: "/toffi.png", etiquetas: ["vegetariano"] },
+    { nombre: "Pepas",               descripcion: "Galletas con corazón de dulce.",       precio: "—", imagen: "/pepas.png", etiquetas: ["vegetariano"] },
     { nombre: "Pasta frola",         descripcion: "Clásica de membrillo.",                precio: "—", imagen: "/pastaplora.jpg", etiquetas: ["vegetariano"] },
     { nombre: "Brownie de chocolate",descripcion: "Bien húmedo, intenso en cacao.",       precio: "—", imagen: "/brownie.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Cookie tradicional",  descripcion: "Galleta grande y mantequillosa.",      precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Cookie red velvet",   descripcion: "Suave, con notas de cacao.",           precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Tarta de coco",       descripcion: "Rellena y aromática.",                 precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Alfajor de coco",     descripcion: "Dulce y suave.",                       precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Cookie tradicional",  descripcion: "Galleta grande y mantequillosa.",      precio: "—", imagen: "/cookietradicional.png", etiquetas: ["vegetariano"] },
+    { nombre: "Cookie red velvet",   descripcion: "Suave, con notas de cacao.",           precio: "—", imagen: "/redvelvet.png", etiquetas: ["vegetariano"] },
+    { nombre: "Tarta de coco",       descripcion: "Rellena y aromática.",                 precio: "—", imagen: "/tartadecoco.png", etiquetas: ["vegetariano"] },
+    { nombre: "Alfajor de coco",     descripcion: "Dulce y suave.",                       precio: "—", imagen: "/alfajordecoco.png", etiquetas: ["vegetariano"] },
     { nombre: "Torta de naranja",    descripcion: "Esponjosa y cítrica.",                 precio: "—", imagen: "/tortadenaranja.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Torta marmolada",     descripcion: "Vainilla y chocolate en espiral.",     precio: "—", imagen: "/tortamarmolada.jpg", etiquetas: ["vegetariano"] },
+    { nombre: "Torta marmolada",     descripcion: "Vainilla y chocolate en espiral.",     precio: "—", imagen: "/tortamarmolada.png", etiquetas: ["vegetariano"] },
   ],
 
   salados: [
-    { nombre: "Empanadas (carne, pollo, choclo, jamón y queso)", descripcion: "Fritas o al horno.", precio: "—", imagen: "/empanadas", etiquetas: [] },
-    { nombre: "Mbejú",             descripcion: "Clásico paraguayo de almidón y queso.",  precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["sin gluten"] },
-    { nombre: "Chipitas",          descripcion: "Bocaditos de queso para picar.",         precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["sin gluten"] },
-    { nombre: "Sopa paraguaya",    descripcion: "Torta salada de maíz y queso.",          precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: ["vegetariano"] },
-    { nombre: "Pajagua Mascada",   descripcion: "Tradición paraguaya a base de carne.",   precio: "—", imagen: "/bg-hero-menu.jpg", etiquetas: [] },
+    { nombre: "Empanadas (carne, pollo, choclo, jamón y queso)", descripcion: "Fritas o al horno.", precio: "—", imagen: "/empanadas.jpg", etiquetas: [] },
+    { nombre: "Mbejú",             descripcion: "Clásico paraguayo de almidón y queso.",  precio: "—", imagen: "/mbeju.png", etiquetas: ["sin gluten"] },
+    { nombre: "Chipitas",          descripcion: "Bocaditos de queso para picar.",         precio: "—", imagen: "/chipa.png", etiquetas: ["sin gluten"] },
+    { nombre: "Sopa paraguaya",    descripcion: "Torta salada de maíz y queso.",          precio: "—", imagen: "/", etiquetas: ["vegetariano"] },
+    { nombre: "Pajagua Mascada",   descripcion: "Tradición paraguaya a base de carne.",   precio: "—", imagen: "/", etiquetas: [] },
   ],
 };
 
@@ -150,10 +146,13 @@ const Cafeteria = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-card rounded-2xl shadow-lg border border-border overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   >
-                    <div className="aspect-square overflow-hidden">
-                      <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/20 flex items-center justify-center">
-                        <Coffee className="h-16 w-16 text-primary/30" />
-                      </div>
+                    {/* Imagen del producto */}
+                    <div className="w-full h-48 overflow-hidden">
+                      <img
+                        src={producto.imagen}
+                        alt={producto.nombre}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">

@@ -9,6 +9,7 @@ import bgHeroMenu from "/bg-hero-menu.jpg"; // Asegúrate de tener esta imagen e
 import { useNavigate } from "react-router-dom";
 const MenuGeneral = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [activeTab, setActiveTab] = useState("picadas");
 
   const menuData = {
     minutas: [
@@ -316,6 +317,12 @@ const MenuGeneral = () => {
     </Card>
   );
 
+  const globalFiltered = Object.entries(menuData)
+    .map(([categoria, items]) =>
+      filteredItems(items as MenuItem[]).map(item => ({ ...item, categoria }))
+    )
+    .flat();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Sección superior con imagen de fondo */}
@@ -362,102 +369,52 @@ const MenuGeneral = () => {
 
       {/* Resto del menú */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Tabs defaultValue="picadas" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-7 mb-8 bg-card">
-            <TabsTrigger value="picadas" className="font-inter">Picadas</TabsTrigger>
-            <TabsTrigger value="minutas" className="font-inter">Minutas</TabsTrigger>
-            <TabsTrigger value="pastas" className="font-inter">Pastas</TabsTrigger>
-            <TabsTrigger value="carnes" className="font-inter">Carnes</TabsTrigger>
-            <TabsTrigger value="ensaladas" className="font-inter">Ensaladas</TabsTrigger>
-            <TabsTrigger value="pizzas" className="font-inter">Pizzas</TabsTrigger>
-            <TabsTrigger value="postres" className="font-inter">Postres</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="picadas">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.picadas).map((item) => renderMenuCard(item))}
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="minutas">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.minutas).map((item) => renderMenuCard(item, true))}
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="pastas">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.pastas).map((item) => renderMenuCard(item, false, true))}
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="carnes">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.carnes).map((item) => renderMenuCard(item))}
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="ensaladas">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.ensaladas).map((item) => renderMenuCard(item))}
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="pizzas">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="mb-6 text-center">
-                <Badge variant="outline" className="text-sm font-medium border-primary text-primary">
-                  <Utensils className="h-3 w-3 mr-1" />
-                  Solo tamaño grande - Todas a ₲ 60.000
-                </Badge>
-              </div>
+        {searchTerm ? (
+          <div>
+            <h2 className="font-playfair text-2xl font-bold mb-6 text-foreground text-center">
+              Resultados de búsqueda
+            </h2>
+            {globalFiltered.length === 0 ? (
+              <p className="text-center text-muted-foreground mb-12">No se encontraron platos.</p>
+            ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredItems(menuData.pizzas).map((item) => renderMenuCard(item))}
+                {globalFiltered.map((item) =>
+                  renderMenuCard(item, item.guarniciones !== undefined, item.salsas !== undefined)
+                )}
               </div>
-            </motion.div>
-          </TabsContent>
-
-          <TabsContent value="postres">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {filteredItems(menuData.postres).map((item) => renderMenuCard(item))}
-            </motion.div>
-          </TabsContent>
-        </Tabs>
-
+            )}
+          </div>
+        ) : (
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-7 mb-8 bg-card">
+              <TabsTrigger value="picadas" className="font-inter">Picadas</TabsTrigger>
+              <TabsTrigger value="minutas" className="font-inter">Minutas</TabsTrigger>
+              <TabsTrigger value="pastas" className="font-inter">Pastas</TabsTrigger>
+              <TabsTrigger value="carnes" className="font-inter">Carnes</TabsTrigger>
+              <TabsTrigger value="ensaladas" className="font-inter">Ensaladas</TabsTrigger>
+              <TabsTrigger value="pizzas" className="font-inter">Pizzas</TabsTrigger>
+              <TabsTrigger value="postres" className="font-inter">Postres</TabsTrigger>
+            </TabsList>
+            {Object.keys(menuData).map((categoria) => (
+              <TabsContent key={categoria} value={categoria}>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                  {filteredItems(menuData[categoria as keyof typeof menuData]).map((item) =>
+                    categoria === "minutas"
+                      ? renderMenuCard(item, true)
+                      : categoria === "pastas"
+                      ? renderMenuCard(item, false, true)
+                      : renderMenuCard(item)
+                  )}
+                </motion.div>
+              </TabsContent>
+            ))}
+          </Tabs>
+        )}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
