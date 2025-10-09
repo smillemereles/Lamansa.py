@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -40,36 +41,52 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3 font-inter">
               <li>
-                <a 
-                  href="#home" 
+                <Link 
+                  to="/" 
                   className="text-background/80 hover:text-primary transition-colors duration-200"
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#about" 
+                <Link 
+                  to="/sobre-nosotros" 
                   className="text-background/80 hover:text-primary transition-colors duration-200"
                 >
                   Sobre Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#menu" 
+                <Link 
+                  to="/menu-general" 
                   className="text-background/80 hover:text-primary transition-colors duration-200"
                 >
-                  Menú
-                </a>
+                  Menú General
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#contact" 
+                <Link 
+                  to="/menu-semanal" 
+                  className="text-background/80 hover:text-primary transition-colors duration-200"
+                >
+                  Menú Semanal
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/cafeteria" 
+                  className="text-background/80 hover:text-primary transition-colors duration-200"
+                >
+                  Cafetería
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contacto" 
                   className="text-background/80 hover:text-primary transition-colors duration-200"
                 >
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
