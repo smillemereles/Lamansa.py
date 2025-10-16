@@ -17,6 +17,7 @@ const navItems = [
   { name: "Menú General", href: "/menu-general", icon: BookOpen },
   { name: "Menú semanal", href: "/menu-semanal", icon: BookOpen },
   { name: "Cafetería", href: "/cafeteria", icon: Coffee },
+  { name: "Especial de Navidad", href: "/navidad", icon: BookOpen },
   { name: "Sobre nosotros", href: "/sobre-nosotros", icon: Info },
   { name: "Contacto", href: "/contacto", icon: Phone },
 ];

@@ -9,6 +9,7 @@ import MenuGeneral from "./pages/MenuGeneral";
 import MenuSemanal from "./pages/MenuSemanal";
 import Cafeteria from "./pages/Cafeteria";
 import SobreNosotros from "./pages/SobreNosotros";
+import NavidadEspecial from "./pages/NavidadEspecial";
 import Contact from "./components/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/menu-general" element={<MenuGeneral />} />
             <Route path="/menu-semanal" element={<MenuSemanal />} />
             <Route path="/cafeteria" element={<Cafeteria />} />
+            <Route path="/navidad" element={<NavidadEspecial />} />
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
