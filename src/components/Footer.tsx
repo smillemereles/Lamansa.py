@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <img 
-              src="/logo la mansa.jpg" 
+              src="/logo_la_mansa.jpg" 
               alt="La Mansa Paraguay" 
               className="h-12 w-auto mb-6 filter brightness-0 invert"
             />
@@ -66,18 +66,18 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/menu-semanal" 
-                  className="text-background/80 hover:text-primary transition-colors duration-200"
-                >
-                  Menú Semanal
-                </Link>
-              </li>
-              <li>
-                <Link 
                   to="/cafeteria" 
                   className="text-background/80 hover:text-primary transition-colors duration-200"
                 >
                   Cafetería
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/navidad" 
+                  className="text-background/80 hover:text-primary transition-colors duration-200"
+                >
+                  Navidad
                 </Link>
               </li>
               <li>
@@ -100,8 +100,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-background/80 text-sm">
-                  Av. España 1234<br />
-                  Asunción, Paraguay
+                  Aka Caraya, Cd. del Este 100151<br />
+                  Ciudad del Este, Paraguay
                 </span>
               </div>
               
@@ -118,9 +118,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <div className="text-background/80 text-sm">
-                  <p>Lun-Vie: 7:00-23:00</p>
-                  <p>Sáb: 8:00-24:00</p>
-                  <p>Dom: 8:00-22:00</p>
+                  <p>Lun-Vie: 8:00-17:00</p>
+                  <p>Sáb: 8:00-17:00</p>
                 </div>
               </div>
             </div>

@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Index from "./pages/Index";
 import MenuGeneral from "./pages/MenuGeneral";
-import MenuSemanal from "./pages/MenuSemanal";
 import Cafeteria from "./pages/Cafeteria";
 import SobreNosotros from "./pages/SobreNosotros";
 import NavidadEspecial from "./pages/NavidadEspecial";
@@ -26,7 +25,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/menu-general" element={<MenuGeneral />} />
-            <Route path="/menu-semanal" element={<MenuSemanal />} />
             <Route path="/cafeteria" element={<Cafeteria />} />
             <Route path="/navidad" element={<NavidadEspecial />} />
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
