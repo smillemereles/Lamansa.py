@@ -6,8 +6,20 @@ const About = () => {
   const navigate = useNavigate(); // 👈 inicializamos
 
   return (
-    <section id="about" className="py-20 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="about" 
+      className="py-20 relative"
+      style={{
+        backgroundImage: 'url("/fondo1.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
+    >
+      {/* Overlay para mejor legibilidad */}
+      <div className="absolute inset-0 bg-white/85"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <motion.div
@@ -70,6 +82,7 @@ const About = () => {
           </motion.div>
         </div>
       </div>
+      {/* Cierre del overlay y section */}
     </section>
   );
 };
