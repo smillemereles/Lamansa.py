@@ -6,29 +6,34 @@ import roastingImage from "@/assets/gallery-roasting.jpg";
 const SobreNosotros = () => {
   const hitos = [
     {
-      año: "2020",
-      titulo: "Los inicios",
-      descripcion: "Nace La Mansa con la visión de crear un espacio único donde confluyan la tradición paraguaya y la pasión italiana."
+      año: "2018",
+      titulo: "Los Inicios",
+      descripcion: "Nace La Mansa con la visión de crear un espacio único donde confluyan la tradición paraguaya y la pasión italiana, fusionando lo mejor de ambas culturas gastronómicas."
     },
     {
-      año: "2021", 
-      titulo: "",
-      descripcion: "Lanzamos nuestros primeros granos de café de especialidad cultivados en Cordillera con técnicas sustentables."
+      año: "2019", 
+      titulo: "Expandiendo Horizontes",
+      descripcion: "Ampliamos nuestro menú incorporando especialidades italianas auténticas, elaboradas con ingredientes locales de la más alta calidad y respetando las recetas tradicionales."
     },
     {
       año: "2020",
-      titulo: "Expansión gastronómica",
-      descripcion: "Incorporamos nuestra cocina italiana con ingredientes locales, creando una fusión única de sabores."
+      titulo: "Resiliencia y Adaptación",
+      descripcion: "A pesar de los desafíos de la pandemia, nos reinventamos ofreciendo servicios de delivery y take-away, manteniendo viva la esencia de La Mansa y el vínculo con nuestros clientes."
     },
     {
       año: "2021",
-      titulo: "Viñedos propios",
-      descripcion: "Iniciamos la producción de vinos con cepas europeas adaptadas al terroir paraguayo."
+      titulo: "Un Nuevo Renacer",
+      descripcion: "Volvimos con más fuerza que nunca, iniciando la renovación integral de nuestro espacio para crear un ambiente acogedor que refleja fielmente nuestra fusión cultural."
     },
     {
-      año: "2023",
-      titulo: "Reconocimiento nacional",
-      descripcion: "Fuimos galardonados como 'Mejor Experiencia Gastronómica' por la Cámara de Turismo de Paraguay."
+      año: "2022",
+      titulo: "Parada Gastronómica del City Tour CDE",
+      descripcion: "Nos consolidamos como un destino gastronómico imperdible en Ciudad del Este, siendo reconocidos oficialmente como parada del City Tour por nuestra calidad, autenticidad y propuesta única."
+    },
+    {
+      año: "2025",
+      titulo: "Actualidad",
+      descripcion: "Continuamos innovando y perfeccionando nuestra oferta culinaria, siempre fieles a nuestra misión de ofrecer experiencias gastronómicas inolvidables que celebran la riqueza de dos culturas."
     }
   ];
 
@@ -46,22 +51,28 @@ const SobreNosotros = () => {
       imagen: "/anto.jpg"
     },
     {
-      nombre: "David Farinha",
+      nombre: "Clara Santacrus",
       rol: "Sous Chef",
       bio: "Experto en cocina italiana, aporta autenticidad y técnica a nuestros platos principales.",
-      imagen: "/david.jpg"
+      imagen: ""
     },
     {
-      nombre: "Gladys",
+      nombre: "Gladys Enciso",
       rol: "Ayudante de Cocina",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
       imagen: "/gladis.jpg"
     },
      {
-      nombre: "Megi Dennis",
+      nombre: "Elva Rolon",
       rol: "Administrativa Contable",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: "/megi.jpg"
+      imagen: ""
+    },
+     {
+      nombre: "Franco Meza",
+      rol: "Panadero",
+      bio: "Pasionado por la repostería artesanal, crea dulces y panes que son verdaderas obras de arte.",
+      imagen: ""
     },
       {
       nombre: "Juan Gavilan",
