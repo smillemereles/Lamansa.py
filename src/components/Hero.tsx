@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="home"
@@ -44,15 +46,15 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium"
-                onClick={() => (window.location.href = "/menu-semanal")}
+                onClick={() => navigate("/menu-general")}
               >
-                Ver Menú Semanal
+                Ver Menú 
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium"
-                onClick={() => (window.location.href = "/cafeteria")}
+                onClick={() => navigate("/cafeteria")}
               >
                 Ver Cafetería
               </Button>
