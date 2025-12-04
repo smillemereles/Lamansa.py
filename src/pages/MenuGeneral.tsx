@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
-import bgHeroMenu from "/bg-hero-menu.jpg"; // Asegúrate de tener esta imagen en /public
+import bgHeroMenu from "/bg-hero-menu.jpg";
 import { useNavigate } from "react-router-dom";
 const MenuGeneral = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -367,8 +367,22 @@ const MenuGeneral = () => {
         </div>
       </section>
 
-      {/* Resto del menú */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Resto del menú con imagen de fondo */}
+      <div 
+        className="relative min-h-screen"
+        style={{
+          backgroundImage: "url('/menugeneral.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed"
+        }}
+      >
+        {/* Overlay para mejor legibilidad */}
+        <div className="absolute inset-0 bg-white/85"></div>
+        
+        {/* Contenido del menú */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {searchTerm ? (
           <div>
             <h2 className="font-playfair text-2xl font-bold mb-6 text-foreground text-center">
@@ -453,7 +467,11 @@ const MenuGeneral = () => {
             * Todas las pizzas son tamaño grande
           </p>
         </div>
+        {/* Cierre del contenido del menú */}
+        </div>
+        {/* Cierre del contenedor con imagen de fondo */}
       </div>
+      {/* Cierre del contenedor principal */}
     </div>
   );
 };
