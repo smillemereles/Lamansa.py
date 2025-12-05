@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Award, Users, Coffee, Leaf, Globe } from "lucide-react";
+import Footer from "@/components/Footer";
 
 
 const SobreNosotros = () => {
@@ -162,7 +163,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="/DSC03046.jpg"
+                  src="public/carpeta para la galeria de fotos/galeria.jpg"
                   alt="Interior La Mansa"
                   className="w-full h-[500px] object-cover"
                 />
@@ -391,7 +392,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="/DSC01990.jpg"
+                  src="public/carpeta para la galeria de fotos/galeria11.jpg"
                   alt="Proceso de tostado"
                   className="w-full h-[400px] object-cover"
                 />
@@ -432,6 +433,10 @@ const SobreNosotros = () => {
           </div>
         </div>
       </section>
+      
+      {/* Línea divisoria decorativa */}
+      <div className="bg-gradient-to-r from-transparent via-primary to-transparent h-0.5"></div>
+      <Footer />
     </div>
   );
 };

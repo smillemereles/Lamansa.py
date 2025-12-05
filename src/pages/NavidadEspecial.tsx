@@ -9,14 +9,14 @@ const productos = [
     id: 1,
     nombre: "Pan Dulce Artesanal",
     descripcion: "Pan dulce tradicional con frutas confitadas y nueces",
-    precio: "45.000",
+    precio: "60.000",
     imagen: "/pandulce.png",
   },
   {
     id: 2,
-    nombre: "Cookies Navideñas",
+    nombre: "3 Cookies Navideñas",
     descripcion: "Assortment de cookies decoradas con motivos navideños",
-    precio: "25.000",
+    precio: "15.000",
     imagen: "/cookiesnavideñas.png",
   },
  
@@ -34,6 +34,27 @@ const productos = [
     precio: "120.000",
     imagen: "/canasta.png",
   },
+    {
+    id: 5,
+    nombre:"Caja de 100 brigadeiros/surtidos",
+    descripcion: "Deliciosos brigadeiros artesanales en caja premium",
+    precio: "200.000",
+    imagen: "/brigadeiros.png",
+  },
+   {
+    id: 6,
+    nombre:"Tabla de frios",
+    descripcion: "Exquisita selección de quesos y embutidos para compartir",
+    precio: "220.000",
+    imagen: "/tabladefriosnavidad.png",
+  },
+  {
+    id: 7,
+    nombre: "Chocotone Artesanal",
+    descripcion: "Pan dulce tradicional con frutas confitadas y nueces",
+    precio: "60.000",
+    imagen: "/chocotone.png",
+  }
 ];
 
 const NavidadEspecial = () => {

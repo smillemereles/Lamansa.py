@@ -2,34 +2,79 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-interior.jpg";
-import wineImage from "@/assets/wine-bar-interior.jpg";
-import seatingImage from "@/assets/gallery-seating.jpg";
-import roastingImage from "@/assets/gallery-roasting.jpg";
-
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
     {
-      src: "/areadevinos.jpg",
-      alt: "Interior principal de La Mansa",
-      title: "Ambiente Principal"
+      src: "/carpeta para la galeria de fotos/galeria.jpg",
+      alt: "Galería La Mansa",
+      title: ""
     },
     {
-      src: "areadevinos2.jpg",
+      src: "/carpeta para la galeria de fotos/galeria2.jpg",
+      alt: "Interior de La Mansa",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/galeria3.jpg",
+      alt: "Ambiente La Mansa",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/galeria9.jpg",
+      alt: "Espacio gastronómico",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/galeria10.jpg",
+      alt: "Vista del local",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/galeria12.jpg",
+      alt: "Ambiente acogedor",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/areadevinos2.jpg",
       alt: "Área de vinos de La Mansa",
-      title: "Wine Bar"
+      title: ""
     },
     {
-      src: "areadevinos3.jpg",
-      alt: "Área de asientos cómodos",
-      title: "Zona de Relax"
+      src: "/carpeta para la galeria de fotos/areadevinos3.jpg",
+      alt: "Área de vinos y degustación",
+      title: ""
     },
     {
-      src: "areadevitrina.jpg",
+      src: "/carpeta para la galeria de fotos/areadevitrina.jpg",
       alt: "Área de vitrina y pastelería",
-      title: "Vitrina y Pastelería"
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/DSC08258.jpg",
+      alt: "Detalle del local",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/merienda.jpg",
+      alt: "Mesa de merienda",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/MESANAVIDEÑA.JPG",
+      alt: "Mesa navideña decorada",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/porotosmarinera.jpg",
+      alt: "Plato de porotos a la marinera",
+      title: ""
+    },
+    {
+      src: "/carpeta para la galeria de fotos/ravioleslabolonhesa.jpg",
+      alt: "Ravioles a la boloñesa",
+      title: ""
     }
   ];
 
@@ -52,11 +97,10 @@ const Gallery = () => {
           className="text-center mb-12"
         >
           <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Nuestros Interiores
+            Nuestra Galeria
           </h2>
           <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cada rincón está diseñado para crear momentos únicos y experiencias 
-            memorables en un ambiente cálido y sofisticado.
+            Un vistazo a los espacios que hacen de La Mansa un lugar especial para cada visita.
           </p>
         </motion.div>
 

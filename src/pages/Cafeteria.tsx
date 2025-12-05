@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Footer from "@/components/Footer";
 
 const Cafeteria = () => {
   const [selectedCategory, setSelectedCategory] = useState("cafe");
@@ -231,6 +232,10 @@ const Cafeteria = () => {
         </motion.div>
       </div>
       </div>
+      
+      {/* Línea divisoria decorativa */}
+      <div className="bg-gradient-to-r from-transparent via-primary to-transparent h-0.5"></div>
+      <Footer />
     </div>
   );
 };

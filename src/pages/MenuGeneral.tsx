@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import bgHeroMenu from "/bg-hero-menu.jpg";
 import { useNavigate } from "react-router-dom";
+import Footer from "@/components/Footer";
 const MenuGeneral = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState("picadas");
@@ -274,11 +275,11 @@ const MenuGeneral = () => {
       </CardHeader>
       <CardContent className="pt-0 px-3 sm:px-6 pb-3 sm:pb-6">
         {showGuarniciones && item.guarniciones && (
-          <div className="mb-2">
-            <p className="font-inter text-xs sm:text-sm font-semibold text-foreground mb-1.5">Guarniciones disponibles:</p>
+          <div className="mb-3">
+            <p className="font-inter text-sm font-semibold text-foreground mb-2">Guarniciones disponibles:</p>
             <div className="flex flex-wrap gap-1">
               {item.guarniciones.map((guarnicion: string) => (
-                <Badge key={guarnicion} variant="outline" className="text-[10px] sm:text-xs py-0 px-1.5">
+                <Badge key={guarnicion} variant="outline" className="text-xs">
                   {guarnicion}
                 </Badge>
               ))}
@@ -286,11 +287,11 @@ const MenuGeneral = () => {
           </div>
         )}
         {showSalsas && item.salsas && (
-          <div className="mb-2">
-            <p className="font-inter text-xs sm:text-sm font-semibold text-foreground mb-1.5">Salsas disponibles:</p>
+          <div className="mb-3">
+            <p className="font-inter text-sm font-semibold text-foreground mb-2">Salsas disponibles:</p>
             <div className="flex flex-wrap gap-1">
               {item.salsas.map((salsa: string) => (
-                <Badge key={salsa} variant="outline" className="text-[10px] sm:text-xs py-0 px-1.5">
+                <Badge key={salsa} variant="outline" className="text-xs">
                   {salsa}
                 </Badge>
               ))}
@@ -298,14 +299,14 @@ const MenuGeneral = () => {
           </div>
         )}
         {item.etiquetas && item.etiquetas.length > 0 && (
-          <div className="flex gap-1.5 mt-2">
+          <div className="flex gap-2 mt-3">
             {item.etiquetas.map((etiqueta: string) => (
               <Badge
                 key={etiqueta}
                 variant="outline"
-                className={`text-[10px] sm:text-xs font-medium py-0 px-1.5 ${getEtiquetaColor(etiqueta)}`}
+                className={`text-xs font-medium ${getEtiquetaColor(etiqueta)}`}
               >
-                <span className="flex items-center gap-0.5">
+                <span className="flex items-center gap-1">
                   {getEtiquetaIcon(etiqueta)}
                   {etiqueta}
                 </span>
@@ -371,7 +372,7 @@ const MenuGeneral = () => {
       <div 
         className="relative min-h-screen"
         style={{
-          backgroundImage: "url('/menugeneral.png')",
+          backgroundImage: "url('/fondomenugeneral.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -379,7 +380,7 @@ const MenuGeneral = () => {
         }}
       >
         {/* Overlay para mejor legibilidad */}
-        <div className="absolute inset-0 bg-white/85"></div>
+        <div className="absolute inset-0 bg-white/30"></div>
         
         {/* Contenido del menú */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -471,7 +472,10 @@ const MenuGeneral = () => {
         </div>
         {/* Cierre del contenedor con imagen de fondo */}
       </div>
-      {/* Cierre del contenedor principal */}
+      
+      {/* Línea divisoria decorativa */}
+      <div className="bg-gradient-to-r from-transparent via-primary to-transparent h-0.5"></div>
+      <Footer />
     </div>
   );
 };
