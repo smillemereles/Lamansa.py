@@ -31,13 +31,13 @@ const Hero = () => {
                 Tradición Paraguaya
                 <span className="block text-primary text-white">Pasión Italiana</span>
                 <span className="block text-white text-3xl lg:text-4xl">
-                  Vinos Propios
+                  Wine Shop
                 </span>
               </h1>
 
               <p className="font-inter text-lg text-white leading-relaxed max-w-lg">
                Donde cada comida cuenta una historia familiar y cada copa celebra nuestras raíces.
-               Descubrí la magia de Paraguay e Italia en tu mesa, vinos La Mansa y experiencias que te
+               Descubrí la magia de Paraguay e Italia en tu mesa, vinos La Mansa Py y experiencias que te
                harán sentir como en casa
               </p>
             </div>

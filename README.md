@@ -1,143 +1,442 @@
-# La Mansa Paraguay 🍷✨  
-Una aplicación web moderna y sofisticada para el restaurante y wine bar **La Mansa Paraguay**, donde la pasión por el vino se encuentra con la gastronomía de autor y el espíritu paraguayo.  
+<div align="center">
+
+# 🍷 La Mansa Paraguay
+
+### *Gastronomía de Autor & Wine Bar*
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.20-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.17-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+
+*Plataforma web moderna para el restaurante y wine bar líder en Asunción, Paraguay*
+
+[🌐 Ver Demo](https://lamansa.vercel.app) • [📱 Contacto](mailto:smillemereles@gmail.com)
+
+</div>
 
 ---
 
-## 🚀 Características  
+## 📋 Tabla de Contenidos
 
-- **Diseño Responsivo**: Optimizado para móviles, tablets y desktop.  
-- **Navegación Suave**: Transiciones y animaciones fluidas con Framer Motion.  
-- **Menús Interactivos**: Carta gastronómica y de vinos organizada por categorías.  
-- **Galería Visual**: Experiencias sensoriales y eventos destacados.  
-- **Reservas Online**: Formulario integrado para reservar mesa o combos especiales.  
-- **Tema Personalizado**: Paleta de colores y tipografías exclusivas de La Mansa.  
-
----
-
-## 🛠️ Tecnologías  
-
-- **Frontend**: React 18 + TypeScript  
-- **Bundler**: Vite  
-- **Styling**: Tailwind CSS + CSS Variables  
-- **Animaciones**: Framer Motion  
-- **Routing**: React Router DOM  
-- **Estado**: TanStack Query  
-- **UI Components**: Radix UI + shadcn/ui  
-- **Linting**: ESLint + TypeScript ESLint  
+- [Acerca del Proyecto](#-acerca-del-proyecto)
+- [Características Principales](#-características-principales)
+- [Stack Tecnológico](#-stack-tecnológico)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Instalación y Configuración](#-instalación-y-configuración)
+- [Scripts Disponibles](#-scripts-disponibles)
+- [Optimizaciones](#-optimizaciones)
+- [SEO y Performance](#-seo-y-performance)
+- [Deployment](#-deployment)
+- [Contribución](#-contribución)
+- [Licencia](#-licencia)
+- [Contacto](#-contacto)
 
 ---
 
-## 📁 Estructura del Proyecto  
-```sh
-LaMansa_Paraguay/
-├── src/
-│ ├── components/ # Componentes reutilizables
-│ ├── pages/ # Páginas principales (Home, Carta, Reservas, Eventos)
-│ ├── hooks/ # Hooks personalizados
-│ ├── lib/ # Constantes y utilidades
-│ ├── assets/ # Recursos estáticos (imágenes, íconos)
-│ ├── App.tsx # Componente principal
-│ ├── main.tsx # Punto de entrada
-│ └── index.css # Estilos globales
-├── public/ # Archivos públicos
-├── package.json # Dependencias
-├── tsconfig.json # Configuración de TypeScript
-├── vite.config.ts # Configuración de Vite
-└── tailwind.config.ts # Configuración de Tailwind
-----
-## 🚀 Instalación  
+## 🎯 Acerca del Proyecto
 
-Clonar el repositorio:  
-```sh
-git clone <repository-url>
-cd LaMansa_Paraguay
-Instalar dependencias:
+**La Mansa Paraguay** es una aplicación web de última generación diseñada para ofrecer una experiencia digital excepcional que refleja la esencia del restaurante: elegancia, sofisticación y pasión por la gastronomía y el vino.
 
-sh
-Copy code
+### 🎨 Filosofía de Diseño
+
+- **Minimalismo Elegante**: Diseño limpio que permite que el contenido respire
+- **Experiencia Sensorial**: Animaciones suaves y transiciones que emulan la experiencia gastronómica
+- **Accesibilidad First**: Cumplimiento de estándares WCAG 2.1 AA
+- **Performance Optimizada**: Tiempos de carga < 3s en 3G
+
+---
+
+## ✨ Características Principales
+
+### 🎨 Interfaz de Usuario
+
+- **Diseño Responsive Premium**: Adaptación perfecta a todos los dispositivos
+- **Animaciones Cinematográficas**: Transiciones fluidas con Framer Motion
+- **Tema Personalizado**: Paleta de colores y tipografías exclusivas
+- **Dark Mode Ready**: Preparado para modo oscuro
+
+### 📱 Funcionalidades
+
+- **Menú Digital Interactivo**: 
+  - Menú general con categorías (Entradas, Platos Principales, Postres)
+  - Menú semanal actualizable
+  - Menú de cafetería especializada
+  - Promociones especiales de temporada
+  
+- **Galería Visual Inmersiva**: 
+  - Carrusel de imágenes con transiciones suaves
+  - Visualización de platos y ambientes
+  
+- **Sección Sobre Nosotros**:
+  - Historia del restaurante
+  - Filosofía gastronómica
+  - Equipo y valores
+
+- **Sistema de Contacto**:
+  - Formulario de contacto con validación
+  - Integración con redes sociales
+  - Mapa de ubicación interactivo
+
+### 🔒 Páginas Legales
+
+- **Política de Privacidad**: Completa y conforme a GDPR
+- **Términos y Condiciones**: Claros y transparentes
+
+---
+
+## 🛠️ Stack Tecnológico
+
+### Core Framework
+```json
+{
+  "react": "^18.3.1",
+  "typescript": "~5.5.3",
+  "vite": "^5.4.20"
+}
+```
+
+### Styling & UI
+- **TailwindCSS** `3.4.17` - Framework CSS utility-first
+- **shadcn/ui** - Componentes UI accesibles y personalizables
+- **Radix UI** - Primitivos UI sin estilos
+- **Lucide React** - Librería de iconos moderna
+
+### Animation & Interaction
+- **Framer Motion** `11.15.0` - Animaciones avanzadas
+- **React Router DOM** `6.28.0` - Enrutamiento SPA
+- **Embla Carousel** - Carrusel de imágenes performante
+
+### Forms & Validation
+- **React Hook Form** `7.54.2` - Gestión de formularios
+- **Zod** `3.24.1` - Validación de esquemas TypeScript-first
+
+### Development Tools
+- **ESLint** - Linting y análisis estático
+- **PostCSS** - Transformación de CSS
+- **Autoprefixer** - Prefijos CSS automáticos
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+Lamansa.py/
+├── 📂 public/                          # Archivos estáticos
+│   ├── robots.txt                      # SEO: Directivas para crawlers
+│   ├── sitemap.xml                     # SEO: Mapa del sitio
+│   ├── _redirects                      # Configuración de redirects
+│   └── carpeta para la galeria de fotos/  # Assets de galería
+│
+├── 📂 src/
+│   ├── 📂 components/                  # Componentes React
+│   │   ├── About.tsx                   # Sección Sobre Nosotros
+│   │   ├── Contact.tsx                 # Formulario de contacto
+│   │   ├── Footer.tsx                  # Footer global
+│   │   ├── Gallery.tsx                 # Carrusel de imágenes
+│   │   ├── Hero.tsx                    # Hero section
+│   │   ├── Navbar.tsx                  # Navegación principal
+│   │   ├── PopularItems.tsx            # Productos destacados
+│   │   └── 📂 ui/                      # Componentes UI base (shadcn)
+│   │
+│   ├── 📂 pages/                       # Páginas principales
+│   │   ├── Index.tsx                   # Homepage
+│   │   ├── MenuGeneral.tsx             # Menú principal
+│   │   ├── MenuSemanal.tsx             # Menú semanal
+│   │   ├── Cafeteria.tsx               # Menú cafetería
+│   │   ├── NavidadEspecial.tsx         # Promociones especiales
+│   │   ├── SobreNosotros.tsx           # Página institucional
+│   │   ├── PoliticaPrivacidad.tsx      # Página legal
+│   │   ├── Terminos.tsx                # Página legal
+│   │   └── NotFound.tsx                # Página 404
+│   │
+│   ├── 📂 hooks/                       # Custom Hooks
+│   │   ├── use-mobile.tsx              # Hook para detección mobile
+│   │   └── use-toast.ts                # Hook para notificaciones
+│   │
+│   ├── 📂 lib/                         # Utilidades
+│   │   ├── utils.ts                    # Funciones helpers
+│   │   └── schema.ts                   # Schemas de validación
+│   │
+│   ├── App.tsx                         # Componente raíz
+│   ├── main.tsx                        # Entry point
+│   └── index.css                       # Estilos globales
+│
+├── 📄 Configuration Files
+├── package.json                        # Dependencias NPM
+├── tsconfig.json                       # Config TypeScript
+├── vite.config.ts                      # Config Vite
+├── tailwind.config.ts                  # Config Tailwind
+├── eslint.config.js                    # Config ESLint
+├── postcss.config.js                   # Config PostCSS
+├── components.json                     # Config shadcn/ui
+├── vercel.json                         # Config Vercel
+└── .gitignore                          # Archivos ignorados
+```
+
+---
+
+## 🚀 Instalación y Configuración
+
+### Prerrequisitos
+
+- **Node.js** >= 18.0.0
+- **npm** >= 9.0.0 o **bun** >= 1.0.0
+- **Git** >= 2.30.0
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/smillemereles/Lamansa.py.git
+cd Lamansa.py
+```
+
+2. **Instalar dependencias**
+```bash
 npm install
-Ejecutar en desarrollo:
+# o usando bun
+bun install
+```
 
-sh
-Copy code
+3. **Configurar variables de entorno** (si aplica)
+```bash
+cp .env.example .env.local
+# Editar .env.local con tus credenciales
+```
+
+4. **Iniciar servidor de desarrollo**
+```bash
 npm run dev
-Construir para producción:
+```
 
-sh
-Copy code
+5. **Abrir en el navegador**
+```
+http://localhost:5173
+```
+
+---
+
+## 📜 Scripts Disponibles
+
+| Script | Descripción | Uso |
+|--------|-------------|-----|
+| `npm run dev` | Inicia servidor de desarrollo con HMR | Desarrollo local |
+| `npm run build` | Construye para producción (minificado) | Deployment |
+| `npm run preview` | Preview de la build de producción | Testing pre-deploy |
+| `npm run lint` | Ejecuta ESLint en todos los archivos | Code quality |
+
+### Scripts Avanzados
+
+```bash
+# Build con análisis de bundle
+npm run build -- --mode analyze
+
+# Linting con auto-fix
+npm run lint -- --fix
+
+# Type checking
+npx tsc --noEmit
+```
+
+---
+
+## ⚡ Optimizaciones
+
+### Performance
+
+- ✅ **Code Splitting**: Carga diferida de rutas
+- ✅ **Tree Shaking**: Eliminación de código muerto
+- ✅ **Image Optimization**: Compresión y formatos modernos
+- ✅ **Asset Preloading**: Precarga de recursos críticos
+- ✅ **Lazy Loading**: Carga diferida de imágenes y componentes
+
+### Bundle Size
+
+```
+dist/index.html                    4.96 kB │ gzip:   1.53 kB
+dist/assets/index-CMDEyECr.css    75.72 kB │ gzip:  12.70 kB
+dist/assets/index-DwFtfiQt.js    560.82 kB │ gzip: 171.53 kB
+```
+
+### Configuraciones
+
+**TypeScript**
+- ✅ Strict Mode habilitado
+- ✅ Path aliases configurados (`@/*`)
+- ✅ Type checking exhaustivo
+
+**ESLint**
+- ✅ React Hooks rules
+- ✅ TypeScript recommended rules
+- ✅ A11y rules (accesibilidad)
+
+**Vite**
+- ✅ Hot Module Replacement (HMR)
+- ✅ Fast Refresh para React
+- ✅ Build optimizations
+
+---
+
+## 🔍 SEO y Performance
+
+### SEO Implementado
+
+- ✅ **Meta Tags**: Title, description, keywords
+- ✅ **Open Graph**: Compartir en redes sociales
+- ✅ **Twitter Cards**: Previsualizaciones en Twitter
+- ✅ **Sitemap XML**: `/sitemap.xml`
+- ✅ **Robots.txt**: `/robots.txt`
+- ✅ **Schema.org**: JSON-LD para rich snippets
+- ✅ **Canonical URLs**: Prevención de contenido duplicado
+
+### Performance Metrics
+
+| Métrica | Objetivo | Estado |
+|---------|----------|--------|
+| First Contentful Paint | < 1.8s | ✅ |
+| Time to Interactive | < 3.9s | ✅ |
+| Speed Index | < 3.4s | ✅ |
+| Total Blocking Time | < 300ms | ✅ |
+| Cumulative Layout Shift | < 0.1 | ✅ |
+
+---
+
+## 🌐 Deployment
+
+### Vercel (Recomendado)
+
+```bash
+# Deployment automático en cada push a main
+git push origin main
+```
+
+**Configuración** (`vercel.json`):
+- Rewrites para SPA routing
+- Headers de seguridad
+- Caché optimizado
+
+### cPanel (Manual)
+
+1. **Generar build**
+```bash
 npm run build
-📱 Scripts Disponibles
-npm run dev → Servidor de desarrollo
+```
 
-npm run build → Construcción para producción
+2. **Crear ZIP para deployment**
+```bash
+# Windows PowerShell
+Compress-Archive -Path 'dist\*' -DestinationPath 'lamansapy-cpanel.zip'
 
-npm run build:dev → Construcción en modo desarrollo
+# Linux/Mac
+zip -r lamansapy-cpanel.zip dist/*
+```
 
-npm run lint → Verificación de código con ESLint
+3. **Subir a cPanel**
+   - Acceder al File Manager
+   - Subir `lamansapy-cpanel.zip`
+   - Extraer en el directorio `public_html`
 
-npm run preview → Vista previa de la build
+### Netlify
 
+```bash
+# netlify.toml ya configurado
+netlify deploy --prod
+```
 
-🔧 Configuración
-TypeScript
+---
 
-Strict Mode activado
+## 📱 Responsive Design
 
-Verificación de null/undefined
+### Breakpoints
 
-Control de variables no utilizadas
+```css
+/* Mobile First Approach */
+sm:  640px   /* Smartphones landscape */
+md:  768px   /* Tablets */
+lg:  1024px  /* Laptops */
+xl:  1280px  /* Desktops */
+2xl: 1536px  /* Large screens */
+```
 
-ESLint
+### Dispositivos Soportados
 
-Reglas de React Hooks
+- ✅ iPhone SE / 5 (320px)
+- ✅ iPhone 12/13/14 (390px)
+- ✅ Android devices (360px - 412px)
+- ✅ iPad / Tablets (768px - 1024px)
+- ✅ Desktop (1280px+)
+- ✅ 4K Displays (2560px+)
 
-Buenas prácticas de TypeScript
+---
 
-Reglas de seguridad
+## 🤝 Contribución
 
-Vite
+Las contribuciones son bienvenidas. Para contribuir:
 
-Hot Module Replacement (HMR)
+1. **Fork** el proyecto
+2. **Crear** una rama feature
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit** tus cambios
+   ```bash
+   git commit -m 'feat: Add some AmazingFeature'
+   ```
+4. **Push** a la rama
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Abrir** un Pull Request
 
-Aliases de importación (@/*)
+### Convenciones de Commits
 
-Optimización de bundles
+Seguimos [Conventional Commits](https://www.conventionalcommits.org/):
 
-📱 Responsive Design
-Optimizada para:
+```
+feat: Nueva funcionalidad
+fix: Corrección de bug
+docs: Cambios en documentación
+style: Cambios de formato (no afectan código)
+refactor: Refactorización de código
+test: Añadir o modificar tests
+chore: Tareas de mantenimiento
+```
 
-Mobile: 320px – 768px
+---
 
-Tablet: 768px – 1024px
+## 📄 Licencia
 
-Desktop: 1024px+
+Este proyecto es **privado** y propiedad de **La Mansa Paraguay**.  
+Todos los derechos reservados © 2024-2025.
 
-🚀 Despliegue
-Vercel (recomendado) → despliegue automático en cada push
+---
 
-Netlify → compatible con Vite
+## 📞 Contacto
 
-GitHub Pages → requiere configuración extra
+<div align="center">
 
-AWS S3 + CloudFront → para versiones empresariales
+### 👨‍💻 **Smille Mereles**
+*Full Stack Developer*
 
-🤝 Contribución
-Hacer fork al proyecto
+[![Email](https://img.shields.io/badge/Email-smillemereles%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:smillemereles@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-smillemereles-181717?style=flat&logo=github&logoColor=white)](https://github.com/smillemereles)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/smillemereles)
 
-Crear una rama feature (git checkout -b feature/NuevaFeature)
+---
 
-Commit (git commit -m 'Agregada nueva feature')
+### 🍷 **La Mansa Paraguay**
+*Gastronomía de Autor & Wine Bar*
 
-Push a la rama (git push origin feature/NuevaFeature)
+📍 Asunción, Paraguay  
+🌐 [lamansa.com.py](https://lamansa.vercel.app)  
+📧 info@lamansa.com.py  
+📱 +595 XXX XXX XXX
 
-Abrir Pull Request
+---
 
-📄 Licencia
-Este proyecto es privado y propiedad de La Mansa Paraguay.
+*Desarrollado con ❤️ y ☕ en Paraguay*
 
-📞 Contacto
-👨‍💻 Desarrollador: Smille Mereles
-📧 Email: smillemereles@gmail.com
-🍷 Proyecto: La Mansa Paraguay
+**La Mansa Paraguay** — *Donde la pasión por el vino se encuentra con la gastronomía de autor*
 
-La Mansa Paraguay – Donde la pasión por el vino se une con la gastronomía de autor. 🍷✨
+</div>

@@ -59,13 +59,13 @@ const SobreNosotros = () => {
     {
       nombre: "Gladys Enciso",
       rol: "Ayudante de Cocina",
-      bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
+      bio: "Apoya en la preparación diaria, asegurando que cada plato cumpla con nuestros altos estándares de calidad.",
       imagen: "/gladis.jpg"
     },
      {
       nombre: "Elva Rolon",
       rol: "Administrativa Contable",
-      bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
+      bio: "Encargada de la gestión administrativa y contable, asegurando el buen funcionamiento del restaurante.",
       imagen: "/elva.JPG"
     },
      {
@@ -77,7 +77,7 @@ const SobreNosotros = () => {
       {
       nombre: "Juan Gavilan",
       rol: "Mozo Jefe",
-      bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
+      bio: "Con amplia experiencia en atención al cliente, lidera nuestro equipo de servicio para garantizar una experiencia excepcional.",
       imagen: "/juan.jpg"
     }
   ];
@@ -149,7 +149,7 @@ const SobreNosotros = () => {
               </h1>
               
               <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                En La Mansa creemos que cada plato servido y cada copa compartida cuentan una historia. 
+                En La Mansa PY creemos que cada plato servido y cada copa compartida cuentan una historia. 
                 Somos más que un restaurante; somos un puente entre la calidez paraguaya y la pasión italiana, 
                 donde tradiciones y sabores se encuentran para crear experiencias gastronómicas únicas e inolvidables.
               </p>

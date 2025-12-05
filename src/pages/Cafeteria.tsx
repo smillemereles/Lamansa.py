@@ -27,8 +27,8 @@ const Cafeteria = () => {
 
  const productos: Record<string, Producto[]> = {
   cafe: [
-    { nombre: "Americano",       descripcion: "Café filtrado intenso.",                  precio: "—", imagen: "/tazadecafé.png", etiquetas: [] },
-    { nombre: "Café corto",      descripcion: "Shot concentrado y aromático.",           precio: "—", imagen: "/cafécorto.png", etiquetas: [] },
+    { nombre: "Americano",       descripcion: "Café filtrado intenso.",                  precio: "—", imagen: "/tazadecafe.png", etiquetas: [] },
+    { nombre: "Café corto",      descripcion: "Shot concentrado y aromático.",           precio: "—", imagen: "/cafecorto.png", etiquetas: [] },
     { nombre: "Espresso longo",  descripcion: "Espresso más largo, sabor balanceado.",   precio: "—", imagen: "/espresso.png", etiquetas: [] },
     { nombre: "Mocaccino",       descripcion: "Espresso, leche y chocolate.",            precio: "—", imagen: "/moccaccino.png", etiquetas: ["vegetariano"] },
     { nombre: "Chocolate",       descripcion: "Bebida caliente de cacao.",               precio: "—", imagen: "/chocolate.png", etiquetas: ["vegetariano"] },

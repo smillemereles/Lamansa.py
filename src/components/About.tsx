@@ -52,7 +52,7 @@ const About = () => {
               
               <div className="space-y-4 font-inter text-muted-foreground leading-relaxed">
                 <p>
-                 En La Mansa fusionamos la calidez de la tradición paraguaya con la 
+                 En La Mansa PY fusionamos la calidez de la tradición paraguaya con la 
                  sofisticación italiana, creando un espacio único donde cada detalle 
                  está pensado para ofrecer experiencias gastronómicas excepcionales.
                 </p>

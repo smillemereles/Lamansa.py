@@ -15,9 +15,9 @@ const productos = [
   {
     id: 2,
     nombre: "3 Cookies Navideñas",
-    descripcion: "Assortment de cookies decoradas con motivos navideños",
+    descripcion: "Selección de galletas decoradas con motivos navideños",
     precio: "15.000",
-    imagen: "/cookiesnavideñas.png",
+    imagen: "/cookienavidad.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const productos = [
     id: 4,
     nombre: "Canasta Navideña Premium",
     descripcion: "Selección de productos navideños gourmet",
-    precio: "120.000",
+    precio: "300.000",
     imagen: "/canasta.png",
   },
     {
