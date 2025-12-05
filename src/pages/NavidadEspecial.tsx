@@ -49,25 +49,25 @@ const NavidadEspecial = () => {
     <main 
       className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/fondonavidad.jpg)',
+        backgroundImage: 'url(/fonfonavidad.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
+        backgroundAttachment: 'scroll'
       }}
     >
-      {/* Overlay beige muy suave */}
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-amber-100/30"></div>
+      {/* Overlay magenta */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/50 to-primary/60"></div>
       
       {/* Contenido */}
       <div className="relative z-10">
         {/* Banner Navideño Sobrio */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/MESANAVIDEÑA.JPG')] opacity-10 bg-cover bg-center"></div>
+        <section className="relative py-20 overflow-hidden bg-primary/50">
+          <div className="absolute inset-0 bg-[url('/MESANAVIÑEÑA.JPG')] opacity-5 bg-cover bg-center"></div>
           
           {/* Elementos decorativos sutiles */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 right-10 w-32 h-32 border border-primary rounded-full"></div>
-            <div className="absolute bottom-10 left-10 w-24 h-24 border border-primary rounded-full"></div>
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-10 right-10 w-32 h-32 border-2 border-white rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-24 h-24 border-2 border-white rounded-full"></div>
           </div>
           
           <motion.div
@@ -77,13 +77,13 @@ const NavidadEspecial = () => {
             className="max-w-7xl mx-auto px-4 text-center relative z-10"
           >
             <div className="inline-block mb-4">
-              <Sparkles className="h-6 w-6 text-primary mx-auto mb-2" />
+              <Sparkles className="h-6 w-6 text-white mx-auto mb-2" />
             </div>
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Colección Navideña
             </h1>
-            <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
-            <p className="font-inter text-lg md:text-xl text-primary font-semibold max-w-2xl mx-auto leading-relaxed">
+            <div className="w-24 h-0.5 bg-white mx-auto mb-6"></div>
+            <p className="font-inter text-lg md:text-xl text-white/95 font-semibold max-w-2xl mx-auto leading-relaxed">
               Celebrá las fiestas con nuestra selección exclusiva de productos artesanales. 
               Sabores únicos para momentos especiales.
             </p>
@@ -91,7 +91,7 @@ const NavidadEspecial = () => {
         </section>
 
       {/* Catálogo de Productos */}
-      <section className="py-20">
+      <section className="py-20 bg-primary/40">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -158,17 +158,17 @@ const NavidadEspecial = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-16 bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm"
+            className="mt-16 bg-primary/90 border border-primary rounded-lg p-8 text-center shadow-lg backdrop-blur-sm"
           >
             <div className="max-w-3xl mx-auto">
-              <Gift className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-playfair text-2xl font-semibold text-gray-800 mb-3">
+              <Gift className="h-8 w-8 text-white mx-auto mb-4" />
+              <h3 className="font-playfair text-2xl font-semibold text-white mb-3">
                 Pedidos Especiales
               </h3>
-              <p className="font-inter text-gray-700 mb-2">
+              <p className="font-inter text-white/90 mb-2">
                 Realizá tu pedido con anticipación. Productos disponibles en cantidades limitadas.
               </p>
-              <p className="font-inter text-sm text-gray-600">
+              <p className="font-inter text-sm text-white/70">
                 Para pedidos corporativos o grandes cantidades, contactanos directamente.
               </p>
             </div>

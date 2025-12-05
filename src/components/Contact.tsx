@@ -24,8 +24,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: 'url(/contactos.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'scroll'
+      }}
+    >
+      <div className="absolute inset-0 bg-white/30"></div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

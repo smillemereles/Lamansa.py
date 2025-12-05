@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Heart, Award, Users, Coffee, Leaf, Globe } from "lucide-react";
-import wineImage from "@/assets/wine-bar-interior.jpg";
-import roastingImage from "@/assets/gallery-roasting.jpg";
+
 
 const SobreNosotros = () => {
   const hitos = [
@@ -126,8 +125,16 @@ const SobreNosotros = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 lg:py-32 relative"
+        style={{
+          backgroundImage: 'url(/nosotros1.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll'
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -167,7 +174,7 @@ const SobreNosotros = () => {
       </section>
 
       {/* Filosofía */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -176,7 +183,7 @@ const SobreNosotros = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-white mb-6">
               Nuestra Filosofía
             </h2>
           </motion.div>
@@ -194,14 +201,14 @@ const SobreNosotros = () => {
                   className="text-center"
                 >
                   <div className="mb-4 flex justify-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                      <Icon className="h-8 w-8 text-primary" />
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                      <Icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="font-playfair text-xl font-bold text-foreground mb-3">
+                  <h3 className="font-playfair text-xl font-bold text-white mb-3">
                     {valor.titulo}
                   </h3>
-                  <p className="font-inter text-muted-foreground text-sm leading-relaxed">
+                  <p className="font-inter text-white/90 text-sm leading-relaxed">
                     {valor.descripcion}
                   </p>
                 </motion.div>
@@ -212,8 +219,16 @@ const SobreNosotros = () => {
       </section>
 
       {/* Línea de Tiempo */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 relative"
+        style={{
+          backgroundImage: 'url("/nosotros2.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll'
+        }}
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -259,7 +274,7 @@ const SobreNosotros = () => {
       </section>
 
       {/* Equipo */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -268,10 +283,10 @@ const SobreNosotros = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground mb-6">
+            <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-white mb-6">
               Nuestro Equipo
             </h2>
-            <p className="font-inter text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="font-inter text-lg text-white/90 max-w-3xl mx-auto">
               Detrás de cada experiencia hay un equipo apasionado de profesionales 
               comprometidos con la excelencia y la innovación gastronómica.
             </p>
@@ -313,8 +328,16 @@ const SobreNosotros = () => {
       </section>
 
       {/* Testimonios */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 relative"
+        style={{
+          backgroundImage: 'url(/nosotros1.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll'
+        }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -357,7 +380,7 @@ const SobreNosotros = () => {
       </section>
 
       {/* Proceso */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -382,11 +405,11 @@ const SobreNosotros = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-6"
             >
-              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-foreground">
+              <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-white">
                 De la tierra a tu mesa
               </h2>
               
-              <div className="space-y-4 font-inter text-muted-foreground leading-relaxed">
+              <div className="space-y-4 font-inter text-white/90 leading-relaxed">
                 <p>
                   Trabajamos directamente con productores locales de Alto Paraná y la región, 
                  seleccionando únicamente ingredientes frescos que cumplen con nuestros estándares de 
