@@ -62,11 +62,6 @@ const Gallery = () => {
       title: ""
     },
     {
-      src: "/carpeta para la galeria de fotos/MESANAVIDEÑA.JPG",
-      alt: "Mesa navideña decorada",
-      title: ""
-    },
-    {
       src: "/carpeta para la galeria de fotos/porotosmarinera.jpg",
       alt: "Plato de porotos a la marinera",
       title: ""

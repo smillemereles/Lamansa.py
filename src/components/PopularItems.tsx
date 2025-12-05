@@ -29,7 +29,7 @@ const PopularItems = () => {
       id: 3,
       name: "Ravioles salsa bolonesa",
       price: "₲ 40.000",
-      image: "/ravioleslabolonhesa.jpg",
+      image: "/carpeta para la galeria de fotos/ravioleslabolonhesa.jpg",
       description: "Ravioles rellenos de carne con salsa de tomate casera",
       badges: ["Sabroso", "Con Gluten"]
     },
