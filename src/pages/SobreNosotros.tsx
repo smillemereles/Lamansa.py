@@ -53,7 +53,7 @@ const SobreNosotros = () => {
       nombre: "Clara Santacrus",
       rol: "Sous Chef",
       bio: "Experto en cocina italiana, aporta autenticidad y técnica a nuestros platos principales.",
-      imagen: ""
+      imagen: "/clara.JPG"
     },
     {
       nombre: "Gladys Enciso",
@@ -65,13 +65,13 @@ const SobreNosotros = () => {
       nombre: "Elva Rolon",
       rol: "Administrativa Contable",
       bio: "Especialista en vinos sudamericanos, creador de nuestros blends únicos",
-      imagen: ""
+      imagen: "/elva.JPG"
     },
      {
       nombre: "Franco Meza",
       rol: "Panadero",
       bio: "Pasionado por la repostería artesanal, crea dulces y panes que son verdaderas obras de arte.",
-      imagen: ""
+      imagen: "/franco.JPG"
     },
       {
       nombre: "Juan Gavilan",
@@ -222,7 +222,7 @@ const SobreNosotros = () => {
       <section 
         className="py-20 relative"
         style={{
-          backgroundImage: 'url("/nosotros2.jpg")',
+          backgroundImage: 'url("/reloj.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'scroll'

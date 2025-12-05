@@ -45,29 +45,67 @@ const NavidadEspecial = () => {
     window.open(url, "_blank");
   };
 
+  // Generar posiciones aleatorias para las luces navideñas
+  const generateLights = (count: number) => {
+    return Array.from({ length: count }, (_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: Math.random() * 3,
+      duration: 2 + Math.random() * 2,
+      color: ['#FF0000', '#DC143C', '#FF6347', '#FF4500', '#FFD700', '#FFA500', '#FF69B4'][Math.floor(Math.random() * 7)]
+    }));
+  };
+
+  const lights = generateLights(30);
+
   return (
     <main 
       className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/fonfonavidad.jpg)',
+        backgroundImage: 'url(/fondonavidad (2).jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'scroll'
       }}
     >
-      {/* Overlay magenta */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/50 to-primary/60"></div>
+      {/* Luces navideñas brillantes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[5]">
+        {lights.map((light) => (
+          <motion.div
+            key={light.id}
+            className="absolute w-6 h-6 rounded-full"
+            style={{
+              left: light.left,
+              top: light.top,
+              backgroundColor: light.color,
+              boxShadow: `0 0 30px ${light.color}, 0 0 60px ${light.color}, 0 0 90px ${light.color}, 0 0 120px ${light.color}`,
+            }}
+            animate={{
+              opacity: [0.6, 1, 0.6],
+              scale: [1, 2.5, 1],
+            }}
+            transition={{
+              duration: light.duration,
+              repeat: Infinity,
+              delay: light.delay,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+
       
       {/* Contenido */}
       <div className="relative z-10">
         {/* Banner Navideño Sobrio */}
-        <section className="relative py-20 overflow-hidden bg-primary/50">
+        <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/MESANAVIÑEÑA.JPG')] opacity-5 bg-cover bg-center"></div>
           
           {/* Elementos decorativos sutiles */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 right-10 w-32 h-32 border-2 border-white rounded-full"></div>
-            <div className="absolute bottom-10 left-10 w-24 h-24 border-2 border-white rounded-full"></div>
+            <div className="absolute top-10 right-10 w-32 h-32 border-2 border-primary rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-24 h-24 border-2 border-primary rounded-full"></div>
           </div>
           
           <motion.div
@@ -77,13 +115,13 @@ const NavidadEspecial = () => {
             className="max-w-7xl mx-auto px-4 text-center relative z-10"
           >
             <div className="inline-block mb-4">
-              <Sparkles className="h-6 w-6 text-white mx-auto mb-2" />
+              <Sparkles className="h-6 w-6 text-primary mx-auto mb-2" />
             </div>
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
               Colección Navideña
             </h1>
-            <div className="w-24 h-0.5 bg-white mx-auto mb-6"></div>
-            <p className="font-inter text-lg md:text-xl text-white/95 font-semibold max-w-2xl mx-auto leading-relaxed">
+            <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
+            <p className="font-inter text-lg md:text-xl text-primary font-semibold max-w-2xl mx-auto leading-relaxed">
               Celebrá las fiestas con nuestra selección exclusiva de productos artesanales. 
               Sabores únicos para momentos especiales.
             </p>
@@ -91,7 +129,7 @@ const NavidadEspecial = () => {
         </section>
 
       {/* Catálogo de Productos */}
-      <section className="py-20 bg-primary/40">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}

@@ -263,22 +263,22 @@ const MenuGeneral = () => {
     showSalsas = false
   ) => (
     <Card key={item.nombre} className="hover:shadow-lg transition-shadow duration-300 border-border">
-      <CardHeader className="pb-3">
-        <div className="flex justify-between items-start">
-          <CardTitle className="font-inter text-lg text-foreground">{item.nombre}</CardTitle>
-          <span className="font-inter font-bold text-primary text-lg">₲ {item.precio}</span>
+      <CardHeader className="pb-2 px-3 sm:px-6 pt-3 sm:pt-6">
+        <div className="flex justify-between items-start gap-2">
+          <CardTitle className="font-inter text-sm sm:text-lg text-foreground leading-tight">{item.nombre}</CardTitle>
+          <span className="font-inter font-bold text-primary text-sm sm:text-lg whitespace-nowrap">₲ {item.precio}</span>
         </div>
-        <CardDescription className="font-inter text-muted-foreground">
+        <CardDescription className="font-inter text-xs sm:text-sm text-muted-foreground leading-snug">
           {item.descripcion}
         </CardDescription>
       </CardHeader>
-      <CardContent className="pt-0">
+      <CardContent className="pt-0 px-3 sm:px-6 pb-3 sm:pb-6">
         {showGuarniciones && item.guarniciones && (
-          <div className="mb-3">
-            <p className="font-inter text-sm font-semibold text-foreground mb-2">Guarniciones disponibles:</p>
+          <div className="mb-2">
+            <p className="font-inter text-xs sm:text-sm font-semibold text-foreground mb-1.5">Guarniciones disponibles:</p>
             <div className="flex flex-wrap gap-1">
               {item.guarniciones.map((guarnicion: string) => (
-                <Badge key={guarnicion} variant="outline" className="text-xs">
+                <Badge key={guarnicion} variant="outline" className="text-[10px] sm:text-xs py-0 px-1.5">
                   {guarnicion}
                 </Badge>
               ))}
@@ -286,11 +286,11 @@ const MenuGeneral = () => {
           </div>
         )}
         {showSalsas && item.salsas && (
-          <div className="mb-3">
-            <p className="font-inter text-sm font-semibold text-foreground mb-2">Salsas disponibles:</p>
+          <div className="mb-2">
+            <p className="font-inter text-xs sm:text-sm font-semibold text-foreground mb-1.5">Salsas disponibles:</p>
             <div className="flex flex-wrap gap-1">
               {item.salsas.map((salsa: string) => (
-                <Badge key={salsa} variant="outline" className="text-xs">
+                <Badge key={salsa} variant="outline" className="text-[10px] sm:text-xs py-0 px-1.5">
                   {salsa}
                 </Badge>
               ))}
@@ -298,14 +298,14 @@ const MenuGeneral = () => {
           </div>
         )}
         {item.etiquetas && item.etiquetas.length > 0 && (
-          <div className="flex gap-2 mt-3">
+          <div className="flex gap-1.5 mt-2">
             {item.etiquetas.map((etiqueta: string) => (
               <Badge
                 key={etiqueta}
                 variant="outline"
-                className={`text-xs font-medium ${getEtiquetaColor(etiqueta)}`}
+                className={`text-[10px] sm:text-xs font-medium py-0 px-1.5 ${getEtiquetaColor(etiqueta)}`}
               >
-                <span className="flex items-center gap-1">
+                <span className="flex items-center gap-0.5">
                   {getEtiquetaIcon(etiqueta)}
                   {etiqueta}
                 </span>

@@ -27,7 +27,7 @@ const Contact = () => {
     <div 
       className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/contactos.jpg)',
+        backgroundImage: 'url(/fondocontactos.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'scroll'
