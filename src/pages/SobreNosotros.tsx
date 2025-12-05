@@ -8,7 +8,7 @@ const SobreNosotros = () => {
     {
       año: "2018",
       titulo: "Los Inicios",
-      descripcion: "Nace La Mansa con la visión de crear un espacio único donde confluyan la tradición paraguaya y la pasión italiana, fusionando lo mejor de ambas culturas gastronómicas."
+      descripcion: "Nace La Mansa Py con la visión de crear un espacio único donde confluyan la tradición paraguaya y la pasión italiana, fusionando lo mejor de ambas culturas gastronómicas."
     },
     {
       año: "2019", 
@@ -18,7 +18,7 @@ const SobreNosotros = () => {
     {
       año: "2020",
       titulo: "Resiliencia y Adaptación",
-      descripcion: "A pesar de los desafíos de la pandemia, nos reinventamos ofreciendo servicios de delivery y take-away, manteniendo viva la esencia de La Mansa y el vínculo con nuestros clientes."
+      descripcion: "A pesar de los desafíos de la pandemia, nos reinventamos ofreciendo servicios de delivery y take-away, manteniendo viva la esencia de La Mansa Py y el vínculo con nuestros clientes."
     },
     {
       año: "2021",
@@ -51,7 +51,7 @@ const SobreNosotros = () => {
       imagen: "/anto.jpg"
     },
     {
-      nombre: "Clara Santacrus",
+      nombre: "Clara Santacruz",
       rol: "Sous Chef",
       bio: "Experto en cocina italiana, aporta autenticidad y técnica a nuestros platos principales.",
       imagen: "/clara.JPG"
@@ -63,7 +63,7 @@ const SobreNosotros = () => {
       imagen: "/gladis.jpg"
     },
      {
-      nombre: "Elva Rolon",
+      nombre: "Elva Rolón",
       rol: "Administrativa Contable",
       bio: "Encargada de la gestión administrativa y contable, asegurando el buen funcionamiento del restaurante.",
       imagen: "/elva.JPG"
@@ -71,7 +71,7 @@ const SobreNosotros = () => {
      {
       nombre: "Franco Meza",
       rol: "Panadero",
-      bio: "Pasionado por la repostería artesanal, crea dulces y panes que son verdaderas obras de arte.",
+      bio: "Apasionado por la panadería artesanal, crea panes que son verdaderas obras de arte.",
       imagen: "/franco.JPG"
     },
       {

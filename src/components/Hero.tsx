@@ -37,7 +37,7 @@ const Hero = () => {
 
               <p className="font-inter text-lg text-white leading-relaxed max-w-lg">
                Donde cada comida cuenta una historia familiar y cada copa celebra nuestras raíces.
-               Descubrí la magia de Paraguay e Italia en tu mesa, vinos La Mansa Py y experiencias que te
+               Descubrí la magia de Paraguay e Italia en tu mesa, vinos y experiencias que te
                harán sentir como en casa
               </p>
             </div>

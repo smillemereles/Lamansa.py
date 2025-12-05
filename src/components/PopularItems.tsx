@@ -19,7 +19,7 @@ const PopularItems = () => {
     },
     {
       id: 2,
-      name: "Noquis salsa blanca",
+      name: "Ñoquis salsa blanca",
       price: "₲ 40.000", 
       image: "/nhoquissalsablanca.jpg",
       description: "Nhoquis caseros con salsa de crema y parmesano",
@@ -27,7 +27,7 @@ const PopularItems = () => {
     },
     {
       id: 3,
-      name: "Ravioles salsa bolonesa",
+      name: "Ravioles salsa boloñesa",
       price: "₲ 40.000",
       image: "/carpeta para la galeria de fotos/ravioleslabolonhesa.jpg",
       description: "Ravioles rellenos de carne con salsa de tomate casera",

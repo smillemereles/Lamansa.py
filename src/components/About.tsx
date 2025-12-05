@@ -59,8 +59,7 @@ const About = () => {
                 
                 <p>
                  Nuestros ingredientes son cuidadosamente seleccionados y preparados artesanalmente, 
-                  mientras que nuestros vinos propios reflejan el terroir paraguayo con 
-                  técnicas europeas, creando maridajes perfectos que despiertan los sentidos.
+                  mientras que con nuestros vinos crean maridajes perfectos que despiertan los sentidos.
                 </p>
                 
                 <p>
