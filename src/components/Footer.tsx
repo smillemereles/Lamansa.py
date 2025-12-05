@@ -21,7 +21,7 @@ const Footer = () => {
             />
             <p className="font-inter text-gray-600 text-sm mb-4 max-w-md leading-relaxed">
               Donde la tradición paraguaya se encuentra con la pasión italiana, 
-              creando experiencias únicas en cada taza y cada copa.
+              creando experiencias únicas en cada platoy cada copa.
             </p>
             
             <div className="flex space-x-3">

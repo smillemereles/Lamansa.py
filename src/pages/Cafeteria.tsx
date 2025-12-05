@@ -98,7 +98,7 @@ const Cafeteria = () => {
     <div 
       className="min-h-screen relative"
       style={{
-        backgroundImage: 'url(/fonfocafeteria.jpg)',
+        backgroundImage: 'url(/fondocafeteria.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
