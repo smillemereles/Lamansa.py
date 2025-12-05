@@ -163,7 +163,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="public/carpeta para la galeria de fotos/galeria.jpg"
+                  src="public/carpeta para la galeria de fotos/galeria10.jpg"
                   alt="Interior La Mansa"
                   className="w-full h-[500px] object-cover"
                 />

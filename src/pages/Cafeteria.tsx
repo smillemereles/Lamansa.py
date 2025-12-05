@@ -59,8 +59,7 @@ const Cafeteria = () => {
     { nombre: "Empanadas (carne, pollo, choclo, jamón y queso)", descripcion: "Fritas o al horno.", precio: "—", imagen: "/empanadas.jpg", etiquetas: [] },
     { nombre: "Mbejú",             descripcion: "Clásico paraguayo de almidón y queso.",  precio: "—", imagen: "/mbeju.png", etiquetas: ["sin gluten"] },
     { nombre: "Chipitas",          descripcion: "Bocaditos de queso para picar.",         precio: "—", imagen: "/chipa.png", etiquetas: ["sin gluten"] },
-    { nombre: "Sopa paraguaya",    descripcion: "Torta salada de maíz y queso.",          precio: "—", imagen: "/", etiquetas: ["vegetariano"] },
-    { nombre: "Pajagua Mascada",   descripcion: "Tradición paraguaya a base de carne.",   precio: "—", imagen: "/", etiquetas: [] },
+    { nombre: "Combo Paraguayo",   descripcion: "Tradición paraguaya a base de carne.",   precio: "—", imagen: "/carpeta para la galeria de fotos/galeria11.jpg", etiquetas: [] }
   ],
 };
 

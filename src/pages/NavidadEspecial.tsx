@@ -19,7 +19,6 @@ const productos = [
     precio: "15.000",
     imagen: "/cookiesnavideñas.png",
   },
- 
   {
     id: 3,
     nombre: "Budín Inglés",
