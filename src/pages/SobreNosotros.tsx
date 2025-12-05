@@ -163,7 +163,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="public/carpeta para la galeria de fotos/galeria10.jpg"
+                  src="/carpeta para la galeria de fotos/galeria10.jpg"
                   alt="Interior La Mansa"
                   className="w-full h-[500px] object-cover"
                 />
@@ -392,7 +392,7 @@ const SobreNosotros = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="public/carpeta para la galeria de fotos/galeria11.jpg"
+                  src="/carpeta para la galeria de fotos/galeria11.jpg"
                   alt="Proceso de tostado"
                   className="w-full h-[400px] object-cover"
                 />
