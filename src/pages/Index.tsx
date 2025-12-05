@@ -14,6 +14,8 @@ const Index = () => {
       <PopularItems />
       <Gallery />
       <CTA />
+      {/* Línea divisoria decorativa */}
+      <div className="bg-gradient-to-r from-transparent via-primary to-transparent h-0.5"></div>
       <Footer />
     </main>
   );

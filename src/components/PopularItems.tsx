@@ -50,7 +50,7 @@ const PopularItems = () => {
         backgroundImage: 'url("/fondo2.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "scroll"
       }}
     >
       {/* Overlay suave para mejor legibilidad */}

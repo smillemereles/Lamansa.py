@@ -50,9 +50,9 @@ const Navbar = () => {
           style={{ minWidth: 48 }}
         >
           <motion.img
-            src="/logo la mansa.jpg"
+            src="/lamansatrans.png"
             alt="La Mansa Paraguay"
-            className="h-10 w-auto object-contain"
+            className="h-14 w-auto object-contain"
             whileHover={{ scale: 1.06, opacity: 0.92 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             style={{ verticalAlign: "middle" }}

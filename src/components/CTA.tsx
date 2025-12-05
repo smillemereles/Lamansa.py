@@ -6,10 +6,10 @@ const CTA = () => {
     <section 
       className="py-20 relative"
       style={{
-        backgroundImage: 'url("/fondo3.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundImage: 'url(/fondo1.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
       }}
     >
       {/* Overlay suave para mejor legibilidad */}

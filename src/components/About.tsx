@@ -10,10 +10,10 @@ const About = () => {
       id="about" 
       className="py-20 relative"
       style={{
-        backgroundImage: 'url("/fondo1.jpg")',
+        backgroundImage: 'url("/fondo3.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundAttachment: "scroll"
       }}
     >
       {/* Overlay suave para mejor legibilidad */}

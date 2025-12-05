@@ -10,56 +10,29 @@ const productos = [
     nombre: "Pan Dulce Artesanal",
     descripcion: "Pan dulce tradicional con frutas confitadas y nueces",
     precio: "45.000",
-    imagen: "/pastaplora.jpg",
+    imagen: "/pandulce.png",
   },
   {
     id: 2,
-    nombre: "Turrón de Chocolate",
-    descripcion: "Turrón premium con chocolate belga y almendras",
-    precio: "38.000",
-    imagen: "/chocolate.png",
-  },
-  {
-    id: 3,
     nombre: "Cookies Navideñas",
     descripcion: "Assortment de cookies decoradas con motivos navideños",
     precio: "25.000",
-    imagen: "/cookietradicional.png",
+    imagen: "/cookiesnavideñas.png",
   },
+ 
   {
-    id: 4,
-    nombre: "Torta Navideña",
-    descripcion: "Torta especial con frutos rojos y crema",
-    precio: "85.000",
-    imagen: "/tortadenaranja.jpg",
-  },
-  {
-    id: 5,
+    id: 3,
     nombre: "Budín Inglés",
     descripcion: "Budín tradicional con frutas secas y especias",
     precio: "42.000",
-    imagen: "/brownie.jpg",
+    imagen: "/bidiningles.png",
   },
   {
-    id: 6,
-    nombre: "Alfajores de Navidad",
-    descripcion: "Set de 12 alfajores decorados temática navideña",
-    precio: "35.000",
-    imagen: "/alfajordemaicena.jpg",
-  },
-  {
-    id: 7,
-    nombre: "Stollen Alemán",
-    descripcion: "Pan navideño alemán con mazapán y frutas",
-    precio: "48.000",
-    imagen: "/pastaplora.jpg",
-  },
-  {
-    id: 8,
+    id: 4,
     nombre: "Canasta Navideña Premium",
     descripcion: "Selección de productos navideños gourmet",
     precio: "120.000",
-    imagen: "/tabladefrios.jpg",
+    imagen: "/canasta.png",
   },
 ];
 
@@ -73,44 +46,58 @@ const NavidadEspecial = () => {
   };
 
   return (
-    <main className="min-h-screen">
-      {/* Banner Navideño */}
-      <section className="relative bg-gradient-to-r from-primary via-[#C8A860] to-[#2D8659] py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/bg-hero-menu.jpg')] opacity-10 bg-cover bg-center"></div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-7xl mx-auto px-4 text-center relative z-10"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="h-8 w-8 text-primary-foreground" />
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
-              Especial de Navidad
-            </h1>
-            <Gift className="h-8 w-8 text-primary-foreground" />
+    <main 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: 'url(/fondonavidad.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
+      }}
+    >
+      {/* Overlay beige muy suave */}
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-50/30 via-orange-50/20 to-amber-100/30"></div>
+      
+      {/* Contenido */}
+      <div className="relative z-10">
+        {/* Banner Navideño Sobrio */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/MESANAVIDEÑA.JPG')] opacity-10 bg-cover bg-center"></div>
+          
+          {/* Elementos decorativos sutiles */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 right-10 w-32 h-32 border border-primary rounded-full"></div>
+            <div className="absolute bottom-10 left-10 w-24 h-24 border border-primary rounded-full"></div>
           </div>
-          <p className="font-inter text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-            Celebrá las fiestas con nuestros productos artesanales exclusivos. 
-            Endulzá tu mesa navideña con sabores únicos y especiales.
-          </p>
-        </motion.div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-4 left-4 text-6xl opacity-20">🎄</div>
-        <div className="absolute bottom-4 right-4 text-6xl opacity-20">⭐</div>
-        <div className="absolute top-1/2 left-1/4 text-4xl opacity-15">🎁</div>
-        <div className="absolute top-1/3 right-1/4 text-4xl opacity-15">❄️</div>
-      </section>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto px-4 text-center relative z-10"
+          >
+            <div className="inline-block mb-4">
+              <Sparkles className="h-6 w-6 text-primary mx-auto mb-2" />
+            </div>
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
+              Colección Navideña
+            </h1>
+            <div className="w-24 h-0.5 bg-primary mx-auto mb-6"></div>
+            <p className="font-inter text-lg md:text-xl text-primary font-semibold max-w-2xl mx-auto leading-relaxed">
+              Celebrá las fiestas con nuestra selección exclusiva de productos artesanales. 
+              Sabores únicos para momentos especiales.
+            </p>
+          </motion.div>
+        </section>
 
       {/* Catálogo de Productos */}
-      <section className="py-16 bg-background">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
             {productos.map((producto, index) => (
               <motion.div
@@ -119,24 +106,25 @@ const NavidadEspecial = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full flex flex-col hover-lift border-border/50 hover:border-primary/30 transition-all">
+                <Card className="h-full flex flex-col bg-white border-gray-200 hover:border-primary/40 hover:shadow-xl transition-all duration-300 group">
                   <CardHeader className="p-0">
                     <div className="relative aspect-square overflow-hidden rounded-t-lg">
                       <img
                         src={producto.imagen}
                         alt={producto.nombre}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <div className="absolute top-2 right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                        🎅 Navidad
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-semibold shadow-md">
+                        Navidad
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="flex-1 p-4">
-                    <CardTitle className="font-playfair text-xl mb-2 text-foreground">
+                  <CardContent className="flex-1 p-5">
+                    <CardTitle className="font-playfair text-xl mb-3 text-gray-800 group-hover:text-primary transition-colors duration-300">
                       {producto.nombre}
                     </CardTitle>
-                    <CardDescription className="font-inter text-sm mb-3 text-muted-foreground">
+                    <CardDescription className="font-inter text-sm mb-4 text-gray-600 leading-relaxed">
                       {producto.descripcion}
                     </CardDescription>
                     <div className="flex items-baseline gap-1">
@@ -145,10 +133,10 @@ const NavidadEspecial = () => {
                       </span>
                     </div>
                   </CardContent>
-                  <CardFooter className="p-4 pt-0">
+                  <CardFooter className="p-5 pt-0">
                     <Button
                       onClick={() => handleWhatsAppOrder(producto.nombre)}
-                      className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-inter font-semibold transition-all"
+                      className="w-full bg-[#6e415d] hover:bg-[#331121] text-white font-inter font-medium transition-all hover:shadow-lg"
                     >
                       <svg
                         className="h-5 w-5 mr-2"
@@ -157,7 +145,7 @@ const NavidadEspecial = () => {
                       >
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                       </svg>
-                      Pedidos al WhatsApp
+                      Consultar por WhatsApp
                     </Button>
                   </CardFooter>
                 </Card>
@@ -165,25 +153,31 @@ const NavidadEspecial = () => {
             ))}
           </motion.div>
 
-          {/* Nota informativa */}
+          {/* Nota informativa elegante */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 bg-secondary/30 border border-primary/20 rounded-lg p-6 text-center"
+            className="mt-16 bg-white border border-gray-200 rounded-lg p-8 text-center shadow-sm"
           >
-            <p className="font-inter text-foreground/80">
-              🎄 <strong>Pedidos especiales:</strong> Realizá tu pedido con anticipación. 
-              Los productos navideños están disponibles en cantidades limitadas.
-            </p>
-            <p className="font-inter text-sm text-muted-foreground mt-2">
-              Para pedidos corporativos o grandes cantidades, contactanos directamente por WhatsApp.
-            </p>
+            <div className="max-w-3xl mx-auto">
+              <Gift className="h-8 w-8 text-primary mx-auto mb-4" />
+              <h3 className="font-playfair text-2xl font-semibold text-gray-800 mb-3">
+                Pedidos Especiales
+              </h3>
+              <p className="font-inter text-gray-700 mb-2">
+                Realizá tu pedido con anticipación. Productos disponibles en cantidades limitadas.
+              </p>
+              <p className="font-inter text-sm text-gray-600">
+                Para pedidos corporativos o grandes cantidades, contactanos directamente.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
       <Footer />
+      </div>
     </main>
   );
 };

@@ -34,8 +34,8 @@ const Cafeteria = () => {
   ],
 
   frios: [
-    { nombre: "Agua",             descripcion: "Agua mineral fría.",                      precio: "—", imagen: "/", etiquetas: ["vegano", "sin gluten", "sin lactosa"] },
-    { nombre: "Refresco",         descripcion: "Bebida gaseosa bien fría.",               precio: "—", imagen: "/", etiquetas: ["vegano", "sin gluten"] },
+    { nombre: "Agua",             descripcion: "Agua mineral fría.",                      precio: "—", imagen: "/aguamineral.jpg", etiquetas: ["vegano", "sin gluten", "sin lactosa"] },
+    { nombre: "Refresco",         descripcion: "Bebida gaseosa bien fría.",               precio: "—", imagen: "/coca-cola-pet-500ml.jpg", etiquetas: ["vegano", "sin gluten"] },
     { nombre: "Jugos naturales",  descripcion: "Frutas exprimidas al momento.",           precio: "—", imagen: "/jugos.jpg", etiquetas: ["vegano", "sin gluten"] },
   ],
 
@@ -95,7 +95,17 @@ const Cafeteria = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: 'url(/fonfocafeteria.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
+      }}
+    >
+      {/* Contenido */}
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -219,6 +229,7 @@ const Cafeteria = () => {
             </a>
           </div>
         </motion.div>
+      </div>
       </div>
     </div>
   );
