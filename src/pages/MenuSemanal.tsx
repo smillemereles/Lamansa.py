@@ -255,7 +255,7 @@ const MenuSemanal = () => {
               Hacé tu pedido por WhatsApp y te lo preparamos para llevar o delivery
             </p>
             <a
-              href="https://wa.link/qgguzn"
+              href="https://api.whatsapp.com/send?phone=595993366000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full"

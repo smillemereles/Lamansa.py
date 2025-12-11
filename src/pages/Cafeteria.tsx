@@ -214,7 +214,7 @@ const Cafeteria = () => {
               Nuestro equipo está listo para asesorarte y preparar tu pedido perfecto
             </p>
             <a
-              href="https://wa.link/qgguzn"
+              href="https://api.whatsapp.com/send?phone=595993366000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full"

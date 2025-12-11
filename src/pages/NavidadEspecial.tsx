@@ -50,11 +50,9 @@ const productos = [
 ];
 
 const NavidadEspecial = () => {
-  const whatsappNumber = "595981234567"; // Reemplazar con el número real
-  
   const handleWhatsAppOrder = (productName: string) => {
     const mensaje = `Hola! Me interesa el producto: ${productName}`;
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensaje)}`;
+    const url = `https://api.whatsapp.com/send?phone=595993366000&text=${encodeURIComponent(mensaje)}`;
     window.open(url, "_blank");
   };
 

@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hola! Me gustaría hacer una consulta sobre La Mansa Paraguay.");
-    window.open(`https://wa.link/qgguzn`, '_blank');
+    window.open('https://api.whatsapp.com/send?phone=595993366000', '_blank');
   };
 
   const handleMapClick = () => {
